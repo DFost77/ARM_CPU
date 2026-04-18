@@ -3,7 +3,7 @@ module REG_FILE(
 	input [4:0] RD_REG2,
 	input [4:0] WR_REG,
 	input [63:0] WR_DATA,
-	input CNTRL_REG_WR,
+	input CTRL_REG_WR,
 	output reg [63:0] RD_DATA1,
 	output reg [63:0] RD_DATA2
 );
@@ -19,13 +19,13 @@ module REG_FILE(
 	end
 	
 	// On any input change
-	always @(RD_REG1, RD_REG2, WR_REG, WR_DATA, CNTRL_REG_WR) begin
+	always @(RD_REG1, RD_REG2, WR_REG, WR_DATA, CTRL_REG_WR) begin
 		// Read register data
 		RD_DATA1 = REG_DATA[RD_REG1];
 		RD_DATA2 = REG_DATA[RD_REG2];
 		
-		// If RegWrite enable, write to reg
-		if (CNTRL_REG_WR == 1) begin
+		// If RegWrite is enabled, write to reg
+		if (CTRL_REG_WR == 1) begin
 			REG_DATA[WR_REG] = WR_DATA;
 		end
 	end
