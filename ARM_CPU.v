@@ -1,5 +1,6 @@
 module ARM_CPU (
 	input CLK,
+	output reg [1:0] CONTROL_SIGNEXT
 	output reg CONTROL_REG2LOGIC,
 	output reg CONTROL_BRANCH,
 	output reg CONTROL_MEMREAD,
@@ -11,10 +12,10 @@ module ARM_CPU (
 	output reg [63:0] PC
 );
 	// Pc buses
-	wire [63:0] tempPC;
-	reg [63:0] PC_to_INSTRUCT_MEM;
+	wire [63:0] temp_pc;
+	wire [63:0] PC_to_INSTRUCT_MEM;
 	reg [63:0] PC_plus4;
-	reg [63:0] PC_ALU_Out;
+	wire [63:0] PC_ALU_Out;
 	reg PC_CTRL;
 	
 	// Instruction to Register buses
@@ -40,7 +41,7 @@ module ARM_CPU (
 	
 	// Instantiate instruction memory
 	INSTRUCT_MEM instruct_memory(
-		.PC_IN(PC),
+		.PC_IN(PC_to_INSTRUCT_MEM),
 		.INSTRUCT_OUT(INSTRUCT_MEM_OUT)
 	);	
 	
@@ -98,12 +99,12 @@ module ARM_CPU (
 		.OUT()
 	);
 	
-	// Mux for next PC
+	// Mux for select PC Src
 	mux_64 PCMux(
 		.in_1(PC_plus4),
 		.in_2(PC_ALU_out),
 		.ctrl(),
-		.out(tempPC)
+		.out(temp_pc)
 	);
 	
 	// Mux for write back
@@ -137,4 +138,28 @@ module mux_5 (
 	// If control bit 0, pick first input
 	assign out = (ctrl == 0) ? in_1 : in_2;
 
+endmodule
+
+module sign_ext(
+	input [31:0] instruction,
+	input [1:0] ctrl,
+	output [63:0] ext_out
+);
+
+	always @* begin
+		case(ctrl)
+			// B extend
+			2'b00 : begin 
+				ext_out = {40{instruction[23]}, instruction[23:0]};
+			end
+			// CBZ extend
+			2'b01 : begin
+				ext_out = {45{instruction[23]}, instruction[23:5]};
+			end
+			// LDUR STUR extend
+			2'b1x : begin
+				ext_out = {55{instruction[20]}, instruction[20:12]};
+			end
+		endcase
+	end
 endmodule
