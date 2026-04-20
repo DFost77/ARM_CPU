@@ -3,7 +3,7 @@ module INSTRUCT_MEM (
 	output reg [31:0] INSTRUCT_OUT
 );
 	// Reserve space for 13 instructions
-	reg [7:0] instruct_mem[51:0];
+	reg [7:0] instruct_mem[63:0];
 	
 	initial begin
 		// LDUR R2, [R10]
