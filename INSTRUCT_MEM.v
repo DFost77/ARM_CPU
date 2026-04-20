@@ -1,11 +1,11 @@
 module INSTRUCT_MEM (
-	input PC_IN
-	output reg [31:0] INSTRUCTION
+	input PC_IN,
+	output reg [31:0] INSTRUCT_OUT
 );
-
+	// Reserve space for 13 instructions
 	reg [7:0] instruct_mem[51:0];
 	
-	inital begin
+	initial begin
 		// LDUR R2, [R10]
 		instruct_mem[0] = 8'h42;
 		instruct_mem[1] = 8'h01;
@@ -44,46 +44,53 @@ module INSTRUCT_MEM (
 		
 		// LDUR R2, [R10]
 		instruct_mem[24] = 8'h42;
-		instruct_mem[25] = 8'h42;
-		instruct_mem[26] = 8'h42;
-		instruct_mem[27] = 8'h42;
+		instruct_mem[25] = 8'h01;
+		instruct_mem[26] = 8'h40;
+		instruct_mem[27] = 8'hF8;
 		
-		// LDUR R2, [R10]
-		instruct_mem[28] = 8'h42;
-		instruct_mem[29] = 8'h42;
-		instruct_mem[30] = 8'h42;
-		instruct_mem[31] = 8'h42;
+		// ORR R6, R2, R3 
+		instruct_mem[28] = 8'h46;
+		instruct_mem[29] = 8'h00;
+		instruct_mem[30] = 8'h03;
+		instruct_mem[31] = 8'hAA;
 		
-		// LDUR R2, [R10]
-		instruct_mem[32] = 8'h42;
-		instruct_mem[33] = 8'h42;
-		instruct_mem[34] = 8'h42;
-		instruct_mem[35] = 8'h42;
+		// AND R7, R2, R3
+		instruct_mem[32] = 8'h47;
+		instruct_mem[33] = 8'h00;
+		instruct_mem[34] = 8'h03;
+		instruct_mem[35] = 8'h8A;
 		
-		// LDUR R2, [R10]
-		instruct_mem[36] = 8'h42;
-		instruct_mem[37] = 8'h42;
-		instruct_mem[38] = 8'h42;
-		instruct_mem[39] = 8'h42;
+		// STUR R4, [R7, #1]
+		instruct_mem[36] = 8'hE4;
+		instruct_mem[37] = 8'h10;
+		instruct_mem[38] = 8'h00;
+		instruct_mem[39] = 8'hF8;
 		
-		// LDUR R2, [R10]
-		instruct_mem[40] = 8'h42;
-		instruct_mem[41] = 8'h42;
-		instruct_mem[42] = 8'h42;
-		instruct_mem[43] = 8'h42;
+		// B #2
+		instruct_mem[40] = 8'h03;
+		instruct_mem[41] = 8'h00;
+		instruct_mem[42] = 8'h00;
+		instruct_mem[43] = 8'h14;
 		
-		// LDUR R2, [R10]
-		instruct_mem[44] = 8'h42;
-		instruct_mem[45] = 8'h42;
-		instruct_mem[46] = 8'h42;
-		instruct_mem[47] = 8'h42;
+		// LDUR R3, [R10, #1]
+		instruct_mem[44] = 8'h43;
+		instruct_mem[45] = 8'h11;
+		instruct_mem[46] = 8'h40;
+		instruct_mem[47] = 8'hF8;
 		
-		// LDUR R2, [R10]
-		instruct_mem[48] = 8'h42;
-		instruct_mem[49] = 8'h42;
-		instruct_mem[50] = 8'h42;
-		instruct_mem[51] = 8'h42;
+		// ADD R8, R0, R1
+		instruct_mem[48] = 8'h08;
+		instruct_mem[49] = 8'h00;
+		instruct_mem[50] = 8'h01;
+		instruct_mem[51] = 8'h8B;
 	end 
 	
+	// On PC_IN change
+	always @(PC_IN) begin
+		INSTRUCT_OUT[7:0] = instruct_mem[PC_IN];
+		INSTRUCT_OUT[15:8] = instruct_mem[PC_IN+1];
+		INSTRUCT_OUT[23:16] = instruct_mem[PC_IN+2];
+		INSTRUCT_OUT[31:24] = instruct_mem[PC_IN+3];
+	end
 	
-		
+endmodule	
