@@ -1,0 +1,106 @@
+module CTRL_UNIT(
+	input	[10:0] opcode,
+	output reg CONTROL_REG2LOGIC,
+	output reg CONTROL_UNCOND_BRANCH,
+	output reg CONTROL_BRANCH,
+	output reg CONTROL_MEMREAD,
+	output reg CONTROL_MEM2REG,
+	output reg [1:0] CONTROL_ALU_OP,
+	output reg CONTROL_MEMWRITE,
+	output reg CONTROL_ALU_SRC,
+	output reg CONTROL_REGWRITE
+);
+	
+	always @(opcode) begin
+		CONTROL_REG2LOGIC = 1'b0;
+		CONTROL_MEM2REG = 1'b0;
+		CONTROL_REGWRITE = 1'b0;
+		CONTROL_MEMREAD = 1'b0;
+		CONTROL_MEMWRITE = 1'b0;
+		CONTROL_ALU_SRC = 1'b0;
+		CONTROL_BRANCH = 1'b0;
+		CONTROL_UNCOND_BRANCH = 1'b0;
+		
+		casex(opcode)
+			// R-format controls 
+			11'b1XX0101X000 : begin
+				CONTROL_REG2LOGIC = 1'b0;
+				CONTROL_ALU_SRC = 1'b0;
+				CONTROL_MEM2REG = 1'b0;
+				CONTROL_REGWRITE = 1'b1;
+				CONTROL_MEMREAD = 1'b0;
+				CONTROL_MEMWRITE = 1'b0;
+				CONTROL_BRANCH = 1'b0;
+				CONTROL_UNCOND_BRANCH = 1'b0;
+				CONTROL_ALU_OP = 2'b10;
+			end
+			
+			// LDUR controls
+			11'b11111000010 : begin
+				CONTROL_REG2LOGIC = 1'b0;
+				CONTROL_ALU_SRC = 1'b1;
+				CONTROL_MEM2REG = 1'b1;
+				CONTROL_REGWRITE = 1'b1;
+				CONTROL_MEMREAD = 1'b1;
+				CONTROL_MEMWRITE = 1'b0;
+				CONTROL_BRANCH = 1'b0;
+				CONTROL_UNCOND_BRANCH = 1'b0;
+				CONTROL_ALU_OP = 2'b00;
+			end
+			
+			// STUR controls
+			11'b11111000000 : begin
+				CONTROL_REG2LOGIC = 1'b1;
+				CONTROL_ALU_SRC = 1'b1;
+				CONTROL_MEM2REG = 1'b0;
+				CONTROL_REGWRITE = 1'b0;
+				CONTROL_MEMREAD = 1'b0;
+				CONTROL_MEMWRITE = 1'b1;
+				CONTROL_BRANCH = 1'b0;
+				CONTROL_UNCOND_BRANCH = 1'b0;
+				CONTROL_ALU_OP = 2'b00;
+			end
+			
+			// CBZ controls
+			11'b10110100XXX : begin
+				CONTROL_REG2LOGIC = 1'b1;
+				CONTROL_ALU_SRC = 1'b0;
+				CONTROL_MEM2REG = 1'bx;
+				CONTROL_REGWRITE = 1'b0;
+				CONTROL_MEMREAD = 1'b0;
+				CONTROL_MEMWRITE = 1'b0;
+				CONTROL_BRANCH = 1'b1;
+				CONTROL_UNCOND_BRANCH = 1'b0;
+				CONTROL_ALU_OP = 2'b01;
+			end
+			
+			// B controls
+			11'b000101XXXXX : begin
+				CONTROL_REG2LOGIC = 1'b0;
+				CONTROL_ALU_SRC = 1'b0;
+				CONTROL_MEM2REG = 1'b0;
+				CONTROL_REGWRITE = 1'b0;
+				CONTROL_MEMREAD = 1'b0;
+				CONTROL_MEMWRITE = 1'b0;
+				CONTROL_BRANCH = 1'b0;
+				CONTROL_UNCOND_BRANCH = 1'b1;
+				CONTROL_ALU_OP = 2'b00;
+			end
+			
+			// default
+			default : begin
+				CONTROL_REG2LOGIC = 1'b0;
+				CONTROL_ALU_SRC = 1'b0;
+				CONTROL_MEM2REG = 1'b0;
+				CONTROL_REGWRITE = 1'b0;
+				CONTROL_MEMREAD = 1'b0;
+				CONTROL_MEMWRITE = 1'b0;
+				CONTROL_BRANCH = 1'b0;
+				CONTROL_UNCOND_BRANCH = 1'b0;
+				CONTROL_ALU_OP = 2'b00;
+			end
+			
+		endcase
+	end
+	
+endmodule

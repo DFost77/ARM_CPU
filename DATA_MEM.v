@@ -1,4 +1,5 @@
 module DATA_MEM(
+	input CLK,
 	input [63:0] ADDR,
 	input [63:0] WR_DATA,
 	input CTRL_MEM_RD,
@@ -15,10 +16,13 @@ module DATA_MEM(
 		for (c = 0; c < 32; c = c+1) begin
 			MEM_DATA[c] = 0;
 		end
+		
+		MEM_DATA[10] = 1540;
+		MEM_DATA[11] = 2117;
 	end
 	
 	// On any input change
-	always @(ADDR, WR_DATA, CTRL_MEM_RD, CTRL_MEM_WR) begin
+	always @(posedge CLK) begin
 		// If MemWrite is enabled, write to mem
 		if (CTRL_MEM_WR == 1) begin
 			MEM_DATA[ADDR] = WR_DATA;
@@ -27,6 +31,8 @@ module DATA_MEM(
 		// If MemRead is enabled, read mem data
 		if (CTRL_MEM_RD == 1) begin
 			RD_DATA = MEM_DATA[ADDR];
+		end else begin
+			RD_DATA = 64'b0; 
 		end
 	end
 	

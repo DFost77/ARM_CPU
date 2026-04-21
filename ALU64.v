@@ -7,7 +7,7 @@ module ALU64 (
 );
 	// Update on input change
 	always @(ARG1, ARG2, CTRL_ALU_OP) begin
-	
+		
 		// Choose output based on ALU OP
 		case (CTRL_ALU_OP)
 			4'b0000 : OUT = ARG1 & ARG2;
@@ -16,6 +16,7 @@ module ALU64 (
 			4'b0110 : OUT = ARG1 - ARG2;
 			4'b0111 : OUT = ARG2;
 			4'b1100 : OUT = ~(ARG1 | ARG2);
+			default : OUT = 64'b0;
 		endcase
 		
 		// Set zero flag on zero result 

@@ -1,5 +1,5 @@
 module INSTRUCT_MEM (
-	input PC_IN,
+	input [63:0] PC_IN,
 	output reg [31:0] INSTRUCT_OUT
 );
 	// Reserve space for 13 instructions

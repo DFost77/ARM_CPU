@@ -1,0 +1,511 @@
+do run.do
+# if {[file exists work]} {
+# 	vdel -lib work -all
+# }
+# 
+# 
+# vlib work
+# vmap work work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work work 
+# Modifying C:/Users/Larry/projects/CompArch/CPU/cpu_tb.mpf
+# 
+# vlog -work work ALU64.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:59:27 on Apr 20,2026
+# vlog -reportprogress 300 -work work ALU64.v 
+# -- Compiling module ALU64
+# 
+# Top level modules:
+# 	ALU64
+# End time: 23:59:28 on Apr 20,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -work work ALU_CTRL.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:59:28 on Apr 20,2026
+# vlog -reportprogress 300 -work work ALU_CTRL.v 
+# -- Compiling module ALU_CTRL
+# 
+# Top level modules:
+# 	ALU_CTRL
+# End time: 23:59:28 on Apr 20,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work CTRL_UNIT.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:59:28 on Apr 20,2026
+# vlog -reportprogress 300 -work work CTRL_UNIT.v 
+# -- Compiling module CTRL_UNIT
+# 
+# Top level modules:
+# 	CTRL_UNIT
+# End time: 23:59:28 on Apr 20,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work REG_FILE.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:59:28 on Apr 20,2026
+# vlog -reportprogress 300 -work work REG_FILE.v 
+# -- Compiling module REG_FILE
+# 
+# Top level modules:
+# 	REG_FILE
+# End time: 23:59:28 on Apr 20,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work INSTRUCT_MEM.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:59:28 on Apr 20,2026
+# vlog -reportprogress 300 -work work INSTRUCT_MEM.v 
+# -- Compiling module INSTRUCT_MEM
+# 
+# Top level modules:
+# 	INSTRUCT_MEM
+# End time: 23:59:28 on Apr 20,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work DATA_MEM.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:59:28 on Apr 20,2026
+# vlog -reportprogress 300 -work work DATA_MEM.v 
+# -- Compiling module DATA_MEM
+# 
+# Top level modules:
+# 	DATA_MEM
+# End time: 23:59:28 on Apr 20,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work ARM_CPU.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:59:28 on Apr 20,2026
+# vlog -reportprogress 300 -work work ARM_CPU.v 
+# -- Compiling module arm_cpu
+# -- Compiling module mux_64
+# -- Compiling module mux_5
+# -- Compiling module sign_ext
+# -- Compiling module sll_2
+# 
+# Top level modules:
+# 	arm_cpu
+# End time: 23:59:28 on Apr 20,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work cpu_tb.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 23:59:28 on Apr 20,2026
+# vlog -reportprogress 300 -work work cpu_tb.v 
+# -- Compiling module cpu_tb
+# 
+# Top level modules:
+# 	cpu_tb
+# End time: 23:59:28 on Apr 20,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -voptargs=+acc work.cpu_tb
+# vsim -voptargs="+acc" work.cpu_tb 
+# Start time: 23:59:28 on Apr 20,2026
+# Loading work.cpu_tb
+# Loading work.INSTRUCT_MEM
+# Loading work.REG_FILE
+# Loading work.DATA_MEM
+# Loading work.arm_cpu
+# Loading work.CTRL_UNIT
+# Loading work.ALU_CTRL
+# Loading work.mux_5
+# Loading work.sign_ext
+# Loading work.sll_2
+# Loading work.mux_64
+# Loading work.ALU64
+# WARNING: No extended dataflow license exists
+# 
+# add wave -noupdate -divider "System Clock"
+# add wave -noupdate -radix binary /cpu_tb/CLK
+# 
+# add wave -noupdate -divider "Program Counter & Instruction"
+# add wave -noupdate -radix unsigned /cpu_tb/PC
+# add wave -noupdate -radix hexadecimal /cpu_tb/INSTRUCT_MEM_OUT
+# 
+# add wave -noupdate -divider "Control Unit"
+# add wave -noupdate -radix binary /cpu_tb/core/main_ctrl/opcode
+# add wave -noupdate -radix binary /cpu_tb/CTRL_REGWRITE
+# add wave -noupdate -radix binary /cpu_tb/CTRL_MEMREAD
+# add wave -noupdate -radix binary /cpu_tb/CTRL_MEMWRITE
+# 
+# add wave -noupdate -divider "Register File"
+# add wave -noupdate -radix unsigned /cpu_tb/RD_REG1
+# add wave -noupdate -radix unsigned /cpu_tb/RD_REG2
+# add wave -noupdate -radix unsigned /cpu_tb/WR_REG
+# add wave -noupdate -radix decimal /cpu_tb/RD_DATA1
+# add wave -noupdate -radix decimal /cpu_tb/RD_DATA2
+# add wave -noupdate -radix decimal /cpu_tb/DMEM_WR_Back
+# 
+# add wave -noupdate -divider "Data Memory"
+# add wave -noupdate -radix decimal /cpu_tb/DMEM_Addr
+# add wave -noupdate -radix decimal /cpu_tb/DMEM_WR_DATA
+# add wave -noupdate -radix decimal /cpu_tb/DMEM_RD_DATA
+# 
+# TreeUpdate [SetDefaultTree]
+# WaveRestoreCursors {{Cursor 1} {0 ns} 0}
+# configure wave -namecolwidth 250
+# configure wave -valuecolwidth 100
+# configure wave -justifyvalue left
+# configure wave -signalnamewidth 1
+# configure wave -snapdistance 10
+# configure wave -datasetprefix 0
+# configure wave -rowmargin 4
+# configure wave -childrowmargin 2
+# 
+# run 200 ns
+# ** Note: $finish    : cpu_tb.v(78)
+#    Time: 200 ns  Iteration: 0  Instance: /cpu_tb
+# 1
+# Break in Module cpu_tb at cpu_tb.v line 78
+do run.do
+# if {[file exists work]} {
+# 	vdel -lib work -all
+# }
+# Error 31: Unable to unlink file "C:/Users/Larry/projects/CompArch/CPU/work/_lib.qdb".
+# Error 133: Unable to remove directory "C:/Users/Larry/projects/CompArch/CPU/work".
+# 
+# 
+# vlib work
+# vmap work work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work work 
+# Modifying C:/Users/Larry/projects/CompArch/CPU/cpu_tb.mpf
+# 
+# vlog -work work ALU64.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:02:59 on Apr 21,2026
+# vlog -reportprogress 300 -work work ALU64.v 
+# -- Compiling module ALU64
+# 
+# Top level modules:
+# 	ALU64
+# End time: 00:02:59 on Apr 21,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work ALU_CTRL.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:02:59 on Apr 21,2026
+# vlog -reportprogress 300 -work work ALU_CTRL.v 
+# -- Compiling module ALU_CTRL
+# 
+# Top level modules:
+# 	ALU_CTRL
+# End time: 00:02:59 on Apr 21,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work CTRL_UNIT.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:02:59 on Apr 21,2026
+# vlog -reportprogress 300 -work work CTRL_UNIT.v 
+# -- Compiling module CTRL_UNIT
+# 
+# Top level modules:
+# 	CTRL_UNIT
+# End time: 00:02:59 on Apr 21,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work REG_FILE.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:02:59 on Apr 21,2026
+# vlog -reportprogress 300 -work work REG_FILE.v 
+# -- Compiling module REG_FILE
+# 
+# Top level modules:
+# 	REG_FILE
+# End time: 00:02:59 on Apr 21,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work INSTRUCT_MEM.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:02:59 on Apr 21,2026
+# vlog -reportprogress 300 -work work INSTRUCT_MEM.v 
+# -- Compiling module INSTRUCT_MEM
+# 
+# Top level modules:
+# 	INSTRUCT_MEM
+# End time: 00:02:59 on Apr 21,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work DATA_MEM.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:02:59 on Apr 21,2026
+# vlog -reportprogress 300 -work work DATA_MEM.v 
+# -- Compiling module DATA_MEM
+# 
+# Top level modules:
+# 	DATA_MEM
+# End time: 00:02:59 on Apr 21,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work ARM_CPU.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:02:59 on Apr 21,2026
+# vlog -reportprogress 300 -work work ARM_CPU.v 
+# -- Compiling module arm_cpu
+# -- Compiling module mux_64
+# -- Compiling module mux_5
+# -- Compiling module sign_ext
+# -- Compiling module sll_2
+# 
+# Top level modules:
+# 	arm_cpu
+# End time: 00:03:00 on Apr 21,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -work work cpu_tb.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:03:00 on Apr 21,2026
+# vlog -reportprogress 300 -work work cpu_tb.v 
+# -- Compiling module cpu_tb
+# 
+# Top level modules:
+# 	cpu_tb
+# End time: 00:03:00 on Apr 21,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -voptargs=+acc work.cpu_tb
+# End time: 00:03:02 on Apr 21,2026, Elapsed time: 0:03:34
+# Errors: 0, Warnings: 1
+# vsim -voptargs="+acc" work.cpu_tb 
+# Start time: 00:03:02 on Apr 21,2026
+# Loading work.cpu_tb
+# Loading work.INSTRUCT_MEM
+# Loading work.REG_FILE
+# Loading work.DATA_MEM
+# Loading work.arm_cpu
+# Loading work.CTRL_UNIT
+# Loading work.ALU_CTRL
+# Loading work.mux_5
+# Loading work.sign_ext
+# Loading work.sll_2
+# Loading work.mux_64
+# Loading work.ALU64
+# WARNING: No extended dataflow license exists
+# 
+# add wave -noupdate -divider "System Clock"
+# add wave -noupdate -radix binary /cpu_tb/CLK
+# 
+# add wave -noupdate -divider "Program Counter & Instruction"
+# add wave -noupdate -radix unsigned /cpu_tb/PC
+# add wave -noupdate -radix hexadecimal /cpu_tb/INSTRUCT_MEM_OUT
+# 
+# add wave -noupdate -divider "Control Unit"
+# add wave -noupdate -radix binary /cpu_tb/core/main_ctrl/opcode
+# add wave -noupdate -radix binary /cpu_tb/CTRL_REGWRITE
+# add wave -noupdate -radix binary /cpu_tb/CTRL_MEMREAD
+# add wave -noupdate -radix binary /cpu_tb/CTRL_MEMWRITE
+# 
+# add wave -noupdate -divider "Register File"
+# add wave -noupdate -radix unsigned /cpu_tb/RD_REG1
+# add wave -noupdate -radix unsigned /cpu_tb/RD_REG2
+# add wave -noupdate -radix unsigned /cpu_tb/WR_REG
+# add wave -noupdate -radix decimal /cpu_tb/RD_DATA1
+# add wave -noupdate -radix decimal /cpu_tb/RD_DATA2
+# add wave -noupdate -radix decimal /cpu_tb/DMEM_WR_Back
+# 
+# add wave -noupdate -divider "Data Memory"
+# add wave -noupdate -radix decimal /cpu_tb/DMEM_Addr
+# add wave -noupdate -radix decimal /cpu_tb/DMEM_WR_DATA
+# add wave -noupdate -radix decimal /cpu_tb/DMEM_RD_DATA
+# 
+# TreeUpdate [SetDefaultTree]
+# WaveRestoreCursors {{Cursor 1} {0 ns} 0}
+# configure wave -namecolwidth 250
+# configure wave -valuecolwidth 100
+# configure wave -justifyvalue left
+# configure wave -signalnamewidth 1
+# configure wave -snapdistance 10
+# configure wave -datasetprefix 0
+# configure wave -rowmargin 4
+# configure wave -childrowmargin 2
+# 
+# run 200 ns
+# ** Note: $finish    : cpu_tb.v(78)
+#    Time: 200 ns  Iteration: 0  Instance: /cpu_tb
+# 1
+# Break in Module cpu_tb at cpu_tb.v line 78
+#  Trace back: bad window path name ""
+#     while executing
+# "winfo parent $child"
+#     (object "::.windowmgr" method "::mtiwidgets::WindowMgr::IsChildOf" body line 3)
+#     invoked from within
+# "$::vsimPriv(windowmgr) IsChildOf [$wo GetData wave] [focus]"
+#     (object "::.main_pane.dataflow.interior.cs.body.pw.df.c" method "::vsimwidgets::Dataflow::ActivePane" body line 9)
+#     invoked from within
+# "ActivePane"
+#     (object "::.main_pane.dataflow.interior.cs.body.pw.df.c" method "::vsimwidgets::Dataflow::Activate" body line 21)
+#     invoked from within
+# ".main_pane.dataflow.interior.cs.body.pw.df.c Activate .main_pane.dataflow"
+#     (in namespace inscope "::" script line 1)
+#     invoked from within
+# "namespace inscope :: {.main_pane.dataflow.interior.cs.body.pw.df.c Activate} .main_pane.dataflow"
+#     ("eval" body line 1)
+#     invoked from within
+# "eval $itk_option(-activatecommand) $frame_name"
+#     (object "::.main_pane.dataflow" method "::mtiwidgets::WindowObj::Activate" body line 16)
+#     invoked from within
+# "$windowobj Activate """
+#     (object "::.vcop" method "::vsimwidgets::Vcop::ActualActivate" body line 36)
+#     invoked from within
+# "::.vcop ActualActivate"
+#     (in namespace inscope "::vsimwidgets::Vcop" script line 1)
+#     invoked from within
+# "namespace inscope ::vsimwidgets::Vcop {::.vcop ActualActivate}"
+#     ("after" script)
+#    <2:C:/intelFPGA/20.1/modelsim_ase/win32aloem/tk8.6/bgerror.tcl:106: ::tkerror {bad window path name ""}
+#    <1:eval:1: ::tk::dialog::error::bgerror {bad window path name ""}
+do run.do
+# if {[file exists work]} {
+# 	vdel -lib work -all
+# }
+# Error 31: Unable to unlink file "C:/Users/Larry/projects/CompArch/CPU/work/_lib.qdb".
+# Error 31: Unable to unlink file "C:/Users/Larry/projects/CompArch/CPU/work/_lib1_0.qdb".
+# Error 31: Unable to unlink file "C:/Users/Larry/projects/CompArch/CPU/work/_lib1_0.qpg".
+# Error 31: Unable to unlink file "C:/Users/Larry/projects/CompArch/CPU/work/_lib1_0.qtl".
+# Error 133: Unable to remove directory "C:/Users/Larry/projects/CompArch/CPU/work".
+# 
+# 
+# vlib work
+# vmap work work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work work 
+# Modifying C:/Users/Larry/projects/CompArch/CPU/cpu_tb.mpf
+# 
+# vlog -work work ALU64.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:09:50 on Apr 21,2026
+# vlog -reportprogress 300 -work work ALU64.v 
+# -- Compiling module ALU64
+# 
+# Top level modules:
+# 	ALU64
+# End time: 00:09:51 on Apr 21,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -work work ALU_CTRL.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:09:51 on Apr 21,2026
+# vlog -reportprogress 300 -work work ALU_CTRL.v 
+# -- Compiling module ALU_CTRL
+# 
+# Top level modules:
+# 	ALU_CTRL
+# End time: 00:09:51 on Apr 21,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work CTRL_UNIT.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:09:51 on Apr 21,2026
+# vlog -reportprogress 300 -work work CTRL_UNIT.v 
+# -- Compiling module CTRL_UNIT
+# 
+# Top level modules:
+# 	CTRL_UNIT
+# End time: 00:09:51 on Apr 21,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work REG_FILE.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:09:51 on Apr 21,2026
+# vlog -reportprogress 300 -work work REG_FILE.v 
+# -- Compiling module REG_FILE
+# 
+# Top level modules:
+# 	REG_FILE
+# End time: 00:09:51 on Apr 21,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work INSTRUCT_MEM.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:09:51 on Apr 21,2026
+# vlog -reportprogress 300 -work work INSTRUCT_MEM.v 
+# -- Compiling module INSTRUCT_MEM
+# 
+# Top level modules:
+# 	INSTRUCT_MEM
+# End time: 00:09:51 on Apr 21,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work DATA_MEM.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:09:51 on Apr 21,2026
+# vlog -reportprogress 300 -work work DATA_MEM.v 
+# -- Compiling module DATA_MEM
+# 
+# Top level modules:
+# 	DATA_MEM
+# End time: 00:09:51 on Apr 21,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work ARM_CPU.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:09:51 on Apr 21,2026
+# vlog -reportprogress 300 -work work ARM_CPU.v 
+# -- Compiling module arm_cpu
+# -- Compiling module mux_64
+# -- Compiling module mux_5
+# -- Compiling module sign_ext
+# -- Compiling module sll_2
+# 
+# Top level modules:
+# 	arm_cpu
+# End time: 00:09:51 on Apr 21,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work cpu_tb.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 00:09:51 on Apr 21,2026
+# vlog -reportprogress 300 -work work cpu_tb.v 
+# -- Compiling module cpu_tb
+# 
+# Top level modules:
+# 	cpu_tb
+# End time: 00:09:51 on Apr 21,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -voptargs=+acc work.cpu_tb
+# End time: 00:09:52 on Apr 21,2026, Elapsed time: 0:06:50
+# Errors: 0, Warnings: 1
+# vsim -voptargs="+acc" work.cpu_tb 
+# Start time: 00:09:52 on Apr 21,2026
+# Loading work.cpu_tb
+# Loading work.INSTRUCT_MEM
+# Loading work.REG_FILE
+# Loading work.DATA_MEM
+# Loading work.arm_cpu
+# Loading work.CTRL_UNIT
+# Loading work.ALU_CTRL
+# Loading work.mux_5
+# Loading work.sign_ext
+# Loading work.sll_2
+# Loading work.mux_64
+# Loading work.ALU64
+# WARNING: No extended dataflow license exists
+# 
+# add wave -noupdate -divider "System Clock"
+# add wave -noupdate -radix binary /cpu_tb/CLK
+# 
+# add wave -noupdate -divider "Program Counter & Instruction"
+# add wave -noupdate -radix unsigned /cpu_tb/PC
+# add wave -noupdate -radix hexadecimal /cpu_tb/INSTRUCT_MEM_OUT
+# 
+# add wave -noupdate -divider "Control Unit"
+# add wave -noupdate -radix binary /cpu_tb/core/main_ctrl/opcode
+# add wave -noupdate -radix binary /cpu_tb/CTRL_REGWRITE
+# add wave -noupdate -radix binary /cpu_tb/CTRL_MEMREAD
+# add wave -noupdate -radix binary /cpu_tb/CTRL_MEMWRITE
+# 
+# add wave -noupdate -divider "Register File"
+# add wave -noupdate -radix unsigned /cpu_tb/RD_REG1
+# add wave -noupdate -radix unsigned /cpu_tb/RD_REG2
+# add wave -noupdate -radix unsigned /cpu_tb/WR_REG
+# add wave -noupdate -radix decimal /cpu_tb/RD_DATA1
+# add wave -noupdate -radix decimal /cpu_tb/RD_DATA2
+# add wave -noupdate -radix decimal /cpu_tb/DMEM_WR_Back
+# 
+# add wave -noupdate -divider "Data Memory"
+# add wave -noupdate -radix decimal /cpu_tb/DMEM_Addr
+# add wave -noupdate -radix decimal /cpu_tb/DMEM_WR_DATA
+# add wave -noupdate -radix decimal /cpu_tb/DMEM_RD_DATA
+# 
+# TreeUpdate [SetDefaultTree]
+# WaveRestoreCursors {{Cursor 1} {0 ns} 0}
+# configure wave -namecolwidth 250
+# configure wave -valuecolwidth 100
+# configure wave -justifyvalue left
+# configure wave -signalnamewidth 1
+# configure wave -snapdistance 10
+# configure wave -datasetprefix 0
+# configure wave -rowmargin 4
+# configure wave -childrowmargin 2
+# 
+# run 200 ns
+# ** Note: $finish    : cpu_tb.v(78)
+#    Time: 200 ns  Iteration: 0  Instance: /cpu_tb
+# 1
+# Break in Module cpu_tb at cpu_tb.v line 78
+# End time: 00:10:12 on Apr 21,2026, Elapsed time: 0:00:20
+# Errors: 0, Warnings: 1

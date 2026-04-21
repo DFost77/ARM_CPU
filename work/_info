@@ -1,0 +1,293 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Larry/projects/CompArch/CPU
+vALU64
+Z1 !s110 1776744591
+!i10b 1
+!s100 FcPn6^?Mnln^RUhP7Tg7N0
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IT`FmJAZlSe`l@2Zb^e;0b0
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z4 w1776742819
+8ALU64.v
+FALU64.v
+!i122 0
+L0 1 26
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1776744590.000000
+!s107 ALU64.v|
+!s90 -reportprogress|300|-work|work|ALU64.v|
+!i113 1
+Z6 o-work work
+Z7 tCvgOpt 0
+n@a@l@u64
+vALU_CTRL
+R1
+!i10b 1
+!s100 aKIPUXM4gF7NNMF5hQz><2
+R2
+I4Wj7dck7c7Slk5IJjEE^a2
+R3
+R0
+R4
+8ALU_CTRL.v
+FALU_CTRL.v
+!i122 1
+L0 1 24
+R5
+r1
+!s85 0
+31
+Z8 !s108 1776744591.000000
+!s107 ALU_CTRL.v|
+!s90 -reportprogress|300|-work|work|ALU_CTRL.v|
+!i113 1
+R6
+R7
+n@a@l@u_@c@t@r@l
+varm_cpu
+R1
+!i10b 1
+!s100 kz]4Q4gUN^5<k:L^2RC420
+R2
+IkPc@`E;DUZeCT<LPD>hz`2
+R3
+R0
+Z9 w1776744162
+Z10 8ARM_CPU.v
+Z11 FARM_CPU.v
+!i122 6
+L0 1 172
+R5
+r1
+!s85 0
+31
+R8
+Z12 !s107 ARM_CPU.v|
+Z13 !s90 -reportprogress|300|-work|work|ARM_CPU.v|
+!i113 1
+R6
+R7
+vcpu_tb
+R1
+!i10b 1
+!s100 KT0RS8QLeI>YG63m<QK:B2
+R2
+IFARW9BJfNLEB=PS`YBzd>0
+R3
+R0
+w1776743079
+8cpu_tb.v
+Fcpu_tb.v
+!i122 7
+L0 3 82
+R5
+r1
+!s85 0
+31
+R8
+!s107 cpu_tb.v|
+!s90 -reportprogress|300|-work|work|cpu_tb.v|
+!i113 1
+R6
+R7
+vCTRL_UNIT
+R1
+!i10b 1
+!s100 zeao??JT`FIN^8jehSoNg3
+R2
+I6QgHj1[;6bRdoa5o@Lb7g2
+R3
+R0
+w1776744573
+8CTRL_UNIT.v
+FCTRL_UNIT.v
+!i122 2
+L0 1 106
+R5
+r1
+!s85 0
+31
+R8
+!s107 CTRL_UNIT.v|
+!s90 -reportprogress|300|-work|work|CTRL_UNIT.v|
+!i113 1
+R6
+R7
+n@c@t@r@l_@u@n@i@t
+vDATA_MEM
+R1
+!i10b 1
+!s100 3?WI@Cc2z9Ecg5KFUQ=JH2
+R2
+IQncA@3MmeVb1djZ>XPWDZ3
+R3
+R0
+w1776744574
+8DATA_MEM.v
+FDATA_MEM.v
+!i122 5
+L0 1 39
+R5
+r1
+!s85 0
+31
+R8
+!s107 DATA_MEM.v|
+!s90 -reportprogress|300|-work|work|DATA_MEM.v|
+!i113 1
+R6
+R7
+n@d@a@t@a_@m@e@m
+vINSTRUCT_MEM
+R1
+!i10b 1
+!s100 A@]F4N9aVje]81R_=Sl8l0
+R2
+IjD<LPl0OLghhF2QYG5n2c2
+R3
+R0
+w1776742883
+8INSTRUCT_MEM.v
+FINSTRUCT_MEM.v
+!i122 4
+L0 1 96
+R5
+r1
+!s85 0
+31
+R8
+!s107 INSTRUCT_MEM.v|
+!s90 -reportprogress|300|-work|work|INSTRUCT_MEM.v|
+!i113 1
+R6
+R7
+n@i@n@s@t@r@u@c@t_@m@e@m
+vmux_5
+R1
+!i10b 1
+!s100 fY]ON^Gc]PT<kFAlK8JF:2
+R2
+Ii_2WJOjckiXDAgUK;ncH_0
+R3
+R0
+R9
+R10
+R11
+!i122 6
+L0 185 10
+R5
+r1
+!s85 0
+31
+R8
+R12
+R13
+!i113 1
+R6
+R7
+vmux_64
+R1
+!i10b 1
+!s100 93kHjz43l4d@aKTb75kZ>0
+R2
+I_6Ml]fE7E?E3f0^_Fo1Wh1
+R3
+R0
+R9
+R10
+R11
+!i122 6
+L0 174 10
+R5
+r1
+!s85 0
+31
+R8
+R12
+R13
+!i113 1
+R6
+R7
+vREG_FILE
+R1
+!i10b 1
+!s100 RmBd?hMlog_:Jjd?6;aM;2
+R2
+IW^nPW617Z9U4IB5Y19KA73
+R3
+R0
+w1776742524
+8REG_FILE.v
+FREG_FILE.v
+!i122 3
+L0 1 34
+R5
+r1
+!s85 0
+31
+R8
+!s107 REG_FILE.v|
+!s90 -reportprogress|300|-work|work|REG_FILE.v|
+!i113 1
+R6
+R7
+n@r@e@g_@f@i@l@e
+vsign_ext
+R1
+!i10b 1
+!s100 KMePjAHiE8BlXfBYCd]O=3
+R2
+I[P`Z@YfD;QJNof?igH5MC0
+R3
+R0
+R9
+R10
+R11
+!i122 6
+L0 196 24
+R5
+r1
+!s85 0
+31
+R8
+R12
+R13
+!i113 1
+R6
+R7
+vsll_2
+R1
+!i10b 1
+!s100 9?f5WMFL_<hPOEeBEc^041
+R2
+I[PXoHTbneP0zLFXl4S5]C1
+R3
+R0
+R9
+R10
+R11
+!i122 6
+L0 221 9
+R5
+r1
+!s85 0
+31
+R8
+R12
+R13
+!i113 1
+R6
+R7

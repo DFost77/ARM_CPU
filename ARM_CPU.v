@@ -1,119 +1,172 @@
-module ARM_CPU (
+module arm_cpu (
 	input CLK,
-	output reg [1:0] CONTROL_SIGNEXT
-	output reg CONTROL_REG2LOGIC,
-	output reg CONTROL_BRANCH,
-	output reg CONTROL_MEMREAD,
-	output reg CONTROL_MEM2REG,
-	output reg CONTROL_ALU_OP,
-	output reg CONTROL_MEMWRITE,
-	output reg CONTROL_ALU_SRC,
-	output reg CONTROL_REGWRITE,
-	output reg [63:0] PC
+	// CPU to Instruction mem
+	output reg [63:0] PC,
+	
+	// Instruction mem to CPU
+	input [31:0] INSTRUCT_MEM_OUT,
+	
+	// CPU to Register outputs 
+	output CTRL_REGWRITE,
+	output [4:0] RD_REG1,
+	output [4:0] RD_REG2,
+	output [4:0] WR_REG,
+	output [63:0] DMEM_WR_Back,
+
+	// Register to CPU inputs
+	input [63:0] RD_DATA1,
+	input [63:0] RD_DATA2,
+	
+	// CPU to Data Memory outputs
+	output [63:0] DMEM_Addr,
+	output [63:0] DMEM_WR_DATA,
+	output CTRL_MEMREAD,
+	output CTRL_MEMWRITE,
+	
+	// DMEM to CPU inputs
+	input [63:0] DMEM_RD_DATA
+
 );
+	// Control wires/buses
+	wire CTRL_REG2LOGIC;
+	wire CTRL_UNCOND_BRANCH;
+	wire CTRL_BRANCH;
+	wire CTRL_JUMP;
+	wire CTRL_MEM2REG;
+	wire [1:0] CTRL_ALU_OP;
+	wire CTRL_ALU_SRC;
+	wire branch_zero;
+
 	// Pc buses
+	wire [63:0] PC_ALU_out;
 	wire [63:0] temp_pc;
 	wire [63:0] PC_to_INSTRUCT_MEM;
-	reg [63:0] PC_plus4;
-	wire [63:0] PC_ALU_Out;
-	reg PC_CTRL;
+	wire [63:0] PC_plus4;
 	
-	// Instruction to Register buses
-	wire [31:0] INSTRUCT_MEM_OUT;
-	wire [4:0] Reg2In;
-	
-	// Sign ext bus
-	reg [63:0] INSTRUCT_SIGN_EXT;
+	// Sign ext and shift bus
+	wire [63:0] INSTRUCT_SIGN_EXT;
+	wire [63:0] immd_shifted;
 	
 	// Register to ALU buses
 	wire [63:0] ALU_ARG1;
-	reg [63:0] ALU_tempARG2;
+	wire [63:0] ALU_tempARG2;
 	wire [63:0] ALU_ARG2;
 	
 	// ALU wire/buses
-	wire ALU_CTRL_ZERO;
-	reg [3:0] ALU_CTRL_OUT;
-	reg [63:0] ALU_RESULT;
+	wire ALU_zero_flag;
+	wire [3:0] ALU_CTRL_OUT;
+	wire [63:0] ALU_RESULT;
+
 	
-	// Data memory buses
-	reg [63:0] DATAMEM_RD_Data;
-	wire [63:0] DATAMEM_WR_Back;
 	
-	// Instantiate instruction memory
-	INSTRUCT_MEM instruct_memory(
-		.PC_IN(PC_to_INSTRUCT_MEM),
-		.INSTRUCT_OUT(INSTRUCT_MEM_OUT)
-	);	
+	// Main controls
+	CTRL_UNIT main_ctrl(
+		.opcode(INSTRUCT_MEM_OUT[31:21]),
+		.CONTROL_REG2LOGIC(CTRL_REG2LOGIC),
+		.CONTROL_UNCOND_BRANCH(CTRL_UNCOND_BRANCH),
+		.CONTROL_BRANCH(CTRL_BRANCH),
+		.CONTROL_MEMREAD(CTRL_MEMREAD),
+		.CONTROL_MEM2REG(CTRL_MEM2REG),
+		.CONTROL_ALU_OP(CTRL_ALU_OP),
+		.CONTROL_MEMWRITE(CTRL_MEMWRITE),
+		.CONTROL_ALU_SRC(CTRL_ALU_SRC),
+		.CONTROL_REGWRITE(CTRL_REGWRITE)
+	);
+	
+	// ALU Control Unit
+    ALU_CTRL alu_controller (
+        .ALUOp(CTRL_ALU_OP),                   
+        .opcode(INSTRUCT_MEM_OUT[31:21]),      
+        .ALU_Ctrl_Out(ALU_CTRL_OUT)          
+    );
+	
 	
 	// Mux for read register 2 input
 	mux_5 Reg2Mux(
 		.in_1(INSTRUCT_MEM_OUT[20:16]),
 		.in_2(INSTRUCT_MEM_OUT[4:0]),
-		.ctrl(CONTROL_REG2LOGIC),
-		.out(Reg2In)
+		.ctrl(CTRL_REG2LOGIC),
+		.out(RD_REG2)
 	);
 	
-	//Instantiate register file
-	REG_FILE registers(
-		.RD_REG1(INSTRUCT_MEM_OUT[9:5]),
-		.RD_REG2(Reg2In),
-		.WR_REG(INSTRUCT_MEM_OUT[4:0]),
-		.WR_DATA(WriteOut),
-		.CTRL_REG_WR(CONTROL_REGWRITE),
-		.RD_DATA1(ALU_ARG1),
-		.RD_DATA2(ALU_ARG2)
+	// Extend immediate module
+	sign_ext immd_ext(
+		.instruction(INSTRUCT_MEM_OUT),
+		.ext_out(INSTRUCT_SIGN_EXT)
+	);
+	
+	// Shift immediate left 2 module
+	sll_2 immd_shift(
+		.in(INSTRUCT_SIGN_EXT),
+		.out(immd_shifted)
 	);
 	
 	// Mux for ALU argument 2
 	mux_64 ALUMux(
-		.in_1(ALU_ARG1),
-		.in_2(ALU_ARG2),
-		.ctrl(CONTROL_ALU_SRC),
+		.in_1(RD_DATA2),
+		.in_2(INSTRUCT_SIGN_EXT),
+		.ctrl(CTRL_ALU_SRC),
 		.out(ALU_ARG2)
 	);
 	
 	// Main ALU
 	ALU64 mainALU(
-		.ARG1(),
-		.ARG2(),
-		.CTRL_ALU_OP(),
-		.CTRL_ALU_ZERO(),
-		.OUT()
+		.ARG1(RD_DATA1),
+		.ARG2(ALU_ARG2),
+		.CTRL_ALU_OP(ALU_CTRL_OUT),
+		.CTRL_ALU_ZERO(ALU_zero_flag),
+		.OUT(ALU_RESULT)
 	);
 	
 	// Adder for next PC
 	ALU64 PC4_Adder(
-		.ARG1(),
-		.ARG2(),
-		.CTRL_ALU_OP(),
+		.ARG1(PC_to_INSTRUCT_MEM),
+		.ARG2(64'd4),
+		.CTRL_ALU_OP(4'b0010),
 		.CTRL_ALU_ZERO(),
-		.OUT()
+		.OUT(PC_plus4)
 	);
 	
 	// Adder for new PC address
 	ALU64 PCaddr_Adder(
-		.ARG1(),
-		.ARG2(),
-		.CTRL_ALU_OP(),
+		.ARG1(PC_to_INSTRUCT_MEM),
+		.ARG2(immd_shifted),
+		.CTRL_ALU_OP(4'b0010),
 		.CTRL_ALU_ZERO(),
-		.OUT()
+		.OUT(PC_ALU_out)
 	);
 	
 	// Mux for select PC Src
 	mux_64 PCMux(
 		.in_1(PC_plus4),
 		.in_2(PC_ALU_out),
-		.ctrl(),
+		.ctrl(CTRL_JUMP),
 		.out(temp_pc)
 	);
 	
 	// Mux for write back
 	mux_64 WriteRegMux(
-		.in_1(DATAMEM_RD_Data),
-		.in_2(ALU_RESULT),
-		.ctrl(CONTROL_MEM2REG),
-		.out(DATAMEM_WR_Back)
+		.in_1(ALU_RESULT),
+		.in_2(DMEM_RD_DATA),
+		.ctrl(CTRL_MEM2REG),
+		.out(DMEM_WR_Back)
 	);
+	
+	assign DMEM_Addr = ALU_RESULT;
+	assign DMEM_WR_DATA = RD_DATA2;
+	assign PC_to_INSTRUCT_MEM = PC;
+	assign RD_REG1 = INSTRUCT_MEM_OUT[9:5];
+	assign WR_REG  = INSTRUCT_MEM_OUT[4:0];
+	assign branch_zero =  ALU_zero_flag & CTRL_BRANCH;
+	assign CTRL_JUMP = CTRL_UNCOND_BRANCH | branch_zero;
+	
+	initial begin
+		PC = 64'b0;
+	end
+	
+	always @(posedge CLK) begin
+		PC <= temp_pc;
+	end
 	
 
 endmodule
@@ -142,24 +195,35 @@ endmodule
 
 module sign_ext(
 	input [31:0] instruction,
-	input [1:0] ctrl,
-	output [63:0] ext_out
+	output reg [63:0] ext_out
 );
 
-	always @* begin
-		case(ctrl)
+	always @(instruction) begin
+		ext_out = 64'b0;
+		casex(instruction[31:21])
 			// B extend
-			2'b00 : begin 
-				ext_out = {40{instruction[23]}, instruction[23:0]};
+			11'b000101XXXXX : begin 
+				ext_out = {{38{instruction[25]}}, instruction[25:0]};
 			end
 			// CBZ extend
-			2'b01 : begin
-				ext_out = {45{instruction[23]}, instruction[23:5]};
+			11'b1011010000 : begin
+				ext_out = {{45{instruction[23]}}, instruction[23:5]};
 			end
 			// LDUR STUR extend
-			2'b1x : begin
-				ext_out = {55{instruction[20]}, instruction[20:12]};
+			11'b111110000x0 : begin
+				ext_out = {{55{instruction[20]}}, instruction[20:12]};
 			end
+			default : ext_out = 64'b0;
 		endcase
+	end
+endmodule
+
+module sll_2(
+	input [63:0] in,
+	output reg [63:0] out
+);
+
+	always @(in) begin
+		out = in << 2;
 	end
 endmodule

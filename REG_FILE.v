@@ -1,4 +1,5 @@
 module REG_FILE(
+	input CLK,
 	input [4:0] RD_REG1,
 	input [4:0] RD_REG2,
 	input [4:0] WR_REG,
@@ -14,12 +15,12 @@ module REG_FILE(
 	integer c;
 	initial begin
 		for (c = 0; c < 32; c = c+1) begin
-			REG_DATA[c] = 0;
+			REG_DATA[c] = c;
 		end
 	end
 	
 	// On any input change
-	always @(RD_REG1, RD_REG2, WR_REG, WR_DATA, CTRL_REG_WR) begin
+	always @(posedge CLK) begin
 		// Read register data
 		RD_DATA1 = REG_DATA[RD_REG1];
 		RD_DATA2 = REG_DATA[RD_REG2];
