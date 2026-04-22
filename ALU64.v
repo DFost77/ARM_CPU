@@ -20,7 +20,11 @@ module ALU64 (
 		endcase
 		
 		// Set zero flag on zero result 
-		CTRL_ALU_ZERO = (OUT == 0) ? 1'b1 : 1'b0;
+		if (OUT == 0) begin
+			CTRL_ALU_ZERO = 1'b1;
+		end else begin
+			CTRL_ALU_ZERO = 1'b0;
+		end
 		
 	end
 endmodule

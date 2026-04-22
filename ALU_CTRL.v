@@ -6,10 +6,10 @@ module ALU_CTRL (
 
 	always @(opcode, ALUOp) begin
 		ALU_Ctrl_Out = 4'b0010;
-		casex(ALUOp)
+		case(ALUOp)
 			2'b00 : ALU_Ctrl_Out = 4'b0010;
-			2'bX1 : ALU_Ctrl_Out = 4'b0111;
-			2'b1X : begin
+			2'b01 : ALU_Ctrl_Out = 4'b0111;
+			2'b10 : begin
 				case (opcode) 
 					11'b10001011000 : ALU_Ctrl_Out = 4'b0010;
 					11'b11001011000 : ALU_Ctrl_Out = 4'b0110;

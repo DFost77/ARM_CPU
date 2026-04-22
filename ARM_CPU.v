@@ -157,8 +157,8 @@ module arm_cpu (
 	assign PC_to_INSTRUCT_MEM = PC;
 	assign RD_REG1 = INSTRUCT_MEM_OUT[9:5];
 	assign WR_REG  = INSTRUCT_MEM_OUT[4:0];
-	assign branch_zero =  ALU_zero_flag & CTRL_BRANCH;
-	assign CTRL_JUMP = CTRL_UNCOND_BRANCH | branch_zero;
+	assign branch_zero =  (ALU_zero_flag & CTRL_BRANCH);
+	assign CTRL_JUMP = (CTRL_UNCOND_BRANCH | branch_zero);
 	
 	initial begin
 		PC = 64'b0;
@@ -175,10 +175,15 @@ module mux_64 (
 	input [63:0] in_1,
 	input [63:0] in_2,
 	input ctrl,
-	output [63:0] out
+	output reg [63:0] out
 );
-	// If control bit 0, pick first input
-	assign out = (ctrl == 0) ? in_1 : in_2;
+	always @* begin
+		if (ctrl == 0) begin
+			out = in_1;
+		end else begin
+			out = in_2;
+		end
+	end
 
 endmodule
 
@@ -186,10 +191,15 @@ module mux_5 (
 	input [4:0] in_1,
 	input [4:0] in_2,
 	input ctrl,
-	output [4:0] out
+	output reg [4:0] out
 ); 
-	// If control bit 0, pick first input
-	assign out = (ctrl == 0) ? in_1 : in_2;
+	always @* begin
+		if (ctrl == 0) begin
+			out = in_1;
+		end else begin
+			out = in_2;
+		end
+	end
 
 endmodule
 
@@ -198,24 +208,25 @@ module sign_ext(
 	output reg [63:0] ext_out
 );
 
-	always @(instruction) begin
-		ext_out = 64'b0;
-		casex(instruction[31:21])
-			// B extend
-			11'b000101XXXXX : begin 
-				ext_out = {{38{instruction[25]}}, instruction[25:0]};
-			end
-			// CBZ extend
-			11'b1011010000 : begin
-				ext_out = {{45{instruction[23]}}, instruction[23:5]};
-			end
-			// LDUR STUR extend
-			11'b111110000x0 : begin
-				ext_out = {{55{instruction[20]}}, instruction[20:12]};
-			end
-			default : ext_out = 64'b0;
-		endcase
+	always @* begin
+		// B format (Opcode: 000101)
+		if (instruction[31:26] == 6'b000101) begin 
+			ext_out = {{38{instruction[25]}}, instruction[25:0]};
+		end
+		// CBZ format (Opcode: 10110100)
+		else if (instruction[31:24] == 8'b10110100) begin
+			ext_out = {{45{instruction[23]}}, instruction[23:5]};
+		end
+		// LDUR/STUR format (Opcodes: 11111000010 or 11111000000)
+		else if (instruction[31:21] == 11'b11111000010 || instruction[31:21] == 11'b11111000000) begin
+			ext_out = {{55{instruction[20]}}, instruction[20:12]};
+		end 
+		// Default fallback
+		else begin
+			ext_out = 64'b0;
+		end
 	end
+	
 endmodule
 
 module sll_2(

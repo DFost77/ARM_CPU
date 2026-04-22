@@ -24,29 +24,59 @@
 # Copying C:/intelFPGA_lite/23.1std/questa_fse/win64/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
+# vlog -vlog01compat -work work +incdir+C:/Users/Larry/projects/CompArch/CPU {C:/Users/Larry/projects/CompArch/CPU/REG_FILE.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 13:10:51 on Apr 21,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Larry/projects/CompArch/CPU" C:/Users/Larry/projects/CompArch/CPU/REG_FILE.v 
+# -- Compiling module REG_FILE
+# 
+# Top level modules:
+# 	REG_FILE
+# End time: 13:10:51 on Apr 21,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Larry/projects/CompArch/CPU {C:/Users/Larry/projects/CompArch/CPU/DATA_MEM.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 13:10:51 on Apr 21,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Larry/projects/CompArch/CPU" C:/Users/Larry/projects/CompArch/CPU/DATA_MEM.v 
+# -- Compiling module DATA_MEM
+# 
+# Top level modules:
+# 	DATA_MEM
+# End time: 13:10:51 on Apr 21,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Larry/projects/CompArch/CPU {C:/Users/Larry/projects/CompArch/CPU/INSTRUCT_MEM.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 13:10:51 on Apr 21,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Larry/projects/CompArch/CPU" C:/Users/Larry/projects/CompArch/CPU/INSTRUCT_MEM.v 
+# -- Compiling module INSTRUCT_MEM
+# 
+# Top level modules:
+# 	INSTRUCT_MEM
+# End time: 13:10:51 on Apr 21,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/Larry/projects/CompArch/CPU {C:/Users/Larry/projects/CompArch/CPU/ALU64.v}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 23:45:34 on Apr 20,2026
+# Start time: 13:10:51 on Apr 21,2026
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Larry/projects/CompArch/CPU" C:/Users/Larry/projects/CompArch/CPU/ALU64.v 
 # -- Compiling module ALU64
 # 
 # Top level modules:
 # 	ALU64
-# End time: 23:45:34 on Apr 20,2026, Elapsed time: 0:00:00
+# End time: 13:10:52 on Apr 21,2026, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/Larry/projects/CompArch/CPU {C:/Users/Larry/projects/CompArch/CPU/CTRL_UNIT.v}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 23:45:34 on Apr 20,2026
+# Start time: 13:10:52 on Apr 21,2026
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Larry/projects/CompArch/CPU" C:/Users/Larry/projects/CompArch/CPU/CTRL_UNIT.v 
 # -- Compiling module CTRL_UNIT
 # 
 # Top level modules:
 # 	CTRL_UNIT
-# End time: 23:45:34 on Apr 20,2026, Elapsed time: 0:00:00
+# End time: 13:10:52 on Apr 21,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/Larry/projects/CompArch/CPU {C:/Users/Larry/projects/CompArch/CPU/arm_cpu.v}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 23:45:35 on Apr 20,2026
+# Start time: 13:10:52 on Apr 21,2026
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Larry/projects/CompArch/CPU" C:/Users/Larry/projects/CompArch/CPU/arm_cpu.v 
 # -- Compiling module arm_cpu
 # -- Compiling module mux_64
@@ -56,111 +86,106 @@
 # 
 # Top level modules:
 # 	arm_cpu
-# End time: 23:45:35 on Apr 20,2026, Elapsed time: 0:00:00
+# End time: 13:10:52 on Apr 21,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/Larry/projects/CompArch/CPU {C:/Users/Larry/projects/CompArch/CPU/ALU_CTRL.v}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 23:45:35 on Apr 20,2026
+# Start time: 13:10:52 on Apr 21,2026
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Larry/projects/CompArch/CPU" C:/Users/Larry/projects/CompArch/CPU/ALU_CTRL.v 
 # -- Compiling module ALU_CTRL
 # 
 # Top level modules:
 # 	ALU_CTRL
-# End time: 23:45:35 on Apr 20,2026, Elapsed time: 0:00:00
+# End time: 13:10:52 on Apr 21,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/Larry/projects/CompArch/CPU {C:/Users/Larry/projects/CompArch/CPU/cpu_tb.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 13:10:52 on Apr 21,2026
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Larry/projects/CompArch/CPU" C:/Users/Larry/projects/CompArch/CPU/cpu_tb.v 
+# -- Compiling module cpu_tb
+# 
+# Top level modules:
+# 	cpu_tb
+# End time: 13:10:52 on Apr 21,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 cd C:/Users/Larry/projects/CompArch/CPU
-# reading C:/intelFPGA_lite/23.1std/questa_fse/win64/../modelsim.ini
-# --------------------------------------------------------
-# ModelSim TCL Simulation Script for LEGv8 CPU
-# Save this file as "run.do" in your project directory
-# --------------------------------------------------------
-
-# 1. Clear the main console
-transcript on
-if {[file exists work]} {
-	vdel -lib work -all
-}
-# Error 31: Unable to unlink file "C:/Users/Larry/projects/CompArch/CPU/work/_lib.qdb".
-# Error 31: Unable to unlink file "C:/Users/Larry/projects/CompArch/CPU/work/_lib1_4.qdb".
-# Error 31: Unable to unlink file "C:/Users/Larry/projects/CompArch/CPU/work/_lib1_4.qpg".
-# Error 31: Unable to unlink file "C:/Users/Larry/projects/CompArch/CPU/work/_lib1_4.qtl".
-# Error 133: Unable to remove directory "C:/Users/Larry/projects/CompArch/CPU/work".
-
-# 2. Create and map the working library
-vlib work
-vmap work work
+# reading modelsim.ini
+do run.do
+# if {[file exists work]} {
+# 	vdel -lib work -all
+# }
+# 
+# 
+# vlib work
+# vmap work work
 # Questa Intel Starter FPGA Edition-64 vmap 2023.3 Lib Mapping Utility 2023.07 Jul 17 2023
 # vmap work work 
-# Copying C:/intelFPGA_lite/23.1std/questa_fse/win64/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
-
-# 3. Compile all Verilog source files
-# The order generally doesn't matter for modern vlog, 
-# but compiling dependencies first is good practice.
-vlog -work work ALU64.v
+# 
+# vlog -work work ALU64.v
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 23:47:01 on Apr 20,2026
+# Start time: 13:11:07 on Apr 21,2026
 # vlog -reportprogress 300 -work work ALU64.v 
 # -- Compiling module ALU64
 # 
 # Top level modules:
 # 	ALU64
-# End time: 23:47:01 on Apr 20,2026, Elapsed time: 0:00:00
+# End time: 13:11:07 on Apr 21,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-vlog -work work ALU_CTRL.v
+# vlog -work work ALU_CTRL.v
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 23:47:01 on Apr 20,2026
+# Start time: 13:11:07 on Apr 21,2026
 # vlog -reportprogress 300 -work work ALU_CTRL.v 
 # -- Compiling module ALU_CTRL
 # 
 # Top level modules:
 # 	ALU_CTRL
-# End time: 23:47:01 on Apr 20,2026, Elapsed time: 0:00:00
+# End time: 13:11:07 on Apr 21,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-vlog -work work CTRL_UNIT.v
+# vlog -work work CTRL_UNIT.v
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 23:47:01 on Apr 20,2026
+# Start time: 13:11:07 on Apr 21,2026
 # vlog -reportprogress 300 -work work CTRL_UNIT.v 
 # -- Compiling module CTRL_UNIT
 # 
 # Top level modules:
 # 	CTRL_UNIT
-# End time: 23:47:01 on Apr 20,2026, Elapsed time: 0:00:00
+# End time: 13:11:07 on Apr 21,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-vlog -work work REG_FILE.v
+# vlog -work work REG_FILE.v
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 23:47:01 on Apr 20,2026
+# Start time: 13:11:07 on Apr 21,2026
 # vlog -reportprogress 300 -work work REG_FILE.v 
 # -- Compiling module REG_FILE
 # 
 # Top level modules:
 # 	REG_FILE
-# End time: 23:47:01 on Apr 20,2026, Elapsed time: 0:00:00
+# End time: 13:11:07 on Apr 21,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-vlog -work work INSTRUCT_MEM.v
+# vlog -work work INSTRUCT_MEM.v
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 23:47:01 on Apr 20,2026
+# Start time: 13:11:07 on Apr 21,2026
 # vlog -reportprogress 300 -work work INSTRUCT_MEM.v 
 # -- Compiling module INSTRUCT_MEM
 # 
 # Top level modules:
 # 	INSTRUCT_MEM
-# End time: 23:47:02 on Apr 20,2026, Elapsed time: 0:00:01
+# End time: 13:11:07 on Apr 21,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-vlog -work work DATA_MEM.v
+# vlog -work work DATA_MEM.v
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 23:47:02 on Apr 20,2026
+# Start time: 13:11:07 on Apr 21,2026
 # vlog -reportprogress 300 -work work DATA_MEM.v 
 # -- Compiling module DATA_MEM
 # 
 # Top level modules:
 # 	DATA_MEM
-# End time: 23:47:02 on Apr 20,2026, Elapsed time: 0:00:00
+# End time: 13:11:07 on Apr 21,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-vlog -work work ARM_CPU.v
+# vlog -work work ARM_CPU.v
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 23:47:02 on Apr 20,2026
+# Start time: 13:11:07 on Apr 21,2026
 # vlog -reportprogress 300 -work work ARM_CPU.v 
 # -- Compiling module arm_cpu
 # -- Compiling module mux_64
@@ -170,24 +195,22 @@ vlog -work work ARM_CPU.v
 # 
 # Top level modules:
 # 	arm_cpu
-# End time: 23:47:02 on Apr 20,2026, Elapsed time: 0:00:00
+# End time: 13:11:07 on Apr 21,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-vlog -work work cpu_tb.v
+# vlog -work work cpu_tb.v
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 23:47:02 on Apr 20,2026
+# Start time: 13:11:07 on Apr 21,2026
 # vlog -reportprogress 300 -work work cpu_tb.v 
 # -- Compiling module cpu_tb
 # 
 # Top level modules:
 # 	cpu_tb
-# End time: 23:47:02 on Apr 20,2026, Elapsed time: 0:00:00
+# End time: 13:11:07 on Apr 21,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-
-# 4. Load the simulation with full visibility for debugging
-# -voptargs=+acc prevents ModelSim from optimizing away internal signals
-vsim -voptargs=+acc work.cpu_tb
+# 
+# vsim -voptargs=+acc work.cpu_tb
 # vsim -voptargs="+acc" work.cpu_tb 
-# Start time: 23:47:02 on Apr 20,2026
+# Start time: 13:11:07 on Apr 21,2026
 # ** Note: (vsim-3812) Design is being optimized...
 # ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
 # ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
@@ -203,54 +226,1118 @@ vsim -voptargs=+acc work.cpu_tb
 # Loading work.sll_2(fast)
 # Loading work.mux_64(fast)
 # Loading work.ALU64(fast)
+# 
+# add wave -noupdate -divider "System Clock"
+# add wave -noupdate -radix binary /cpu_tb/CLK
+# 
+# add wave -noupdate -divider "Program Counter & Instruction"
+# add wave -noupdate -radix unsigned /cpu_tb/PC
+# add wave -noupdate -radix hexadecimal /cpu_tb/INSTRUCT_MEM_OUT
+# 
+# add wave -noupdate -divider "Control Unit"
+# add wave -noupdate -radix binary /cpu_tb/core/main_ctrl/opcode
+# add wave -noupdate -radix binary /cpu_tb/CTRL_REGWRITE
+# add wave -noupdate -radix binary /cpu_tb/CTRL_MEMREAD
+# add wave -noupdate -radix binary /cpu_tb/CTRL_MEMWRITE
+# 
+# add wave -noupdate -divider "Register File"
+# add wave -noupdate -radix unsigned /cpu_tb/RD_REG1
+# add wave -noupdate -radix unsigned /cpu_tb/RD_REG2
+# add wave -noupdate -radix unsigned /cpu_tb/WR_REG
+# add wave -noupdate -radix decimal /cpu_tb/RD_DATA1
+# add wave -noupdate -radix decimal /cpu_tb/RD_DATA2
+# add wave -noupdate -radix decimal /cpu_tb/DMEM_WR_Back
+# 
+# add wave -noupdate -divider "Data Memory"
+# add wave -noupdate -radix decimal /cpu_tb/DMEM_Addr
+# add wave -noupdate -radix decimal /cpu_tb/DMEM_WR_DATA
+# add wave -noupdate -radix decimal /cpu_tb/DMEM_RD_DATA
+# 
+# TreeUpdate [SetDefaultTree]
+# WaveRestoreCursors {{Cursor 1} {0 ns} 0}
+# configure wave -namecolwidth 250
+# configure wave -valuecolwidth 100
+# configure wave -justifyvalue left
+# configure wave -signalnamewidth 1
+# configure wave -snapdistance 10
+# configure wave -datasetprefix 0
+# configure wave -rowmargin 4
+# configure wave -childrowmargin 2
+# 
+# run 200 ns
+# ** Note: $finish    : cpu_tb.v(78)
+#    Time: 200 ns  Iteration: 0  Instance: /cpu_tb
+# 1
+# Break in Module cpu_tb at cpu_tb.v line 78
+# Causality operation skipped due to absence of debug database file
+do run.do
+# if {[file exists work]} {
+# 	vdel -lib work -all
+# }
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is Larry@DF-PC101.
+# 
+# 
+# vlib work
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# vmap work work
+# Questa Intel Starter FPGA Edition-64 vmap 2023.3 Lib Mapping Utility 2023.07 Jul 17 2023
+# vmap work work 
+# Modifying modelsim.ini
+# 
+# vlog -work work ALU64.v
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 13:13:26 on Apr 21,2026
+# vlog -reportprogress 300 -work work ALU64.v 
+# -- Compiling module ALU64
+# 
+# Top level modules:
+# 	ALU64
+# End time: 13:13:26 on Apr 21,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work ALU_CTRL.v
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 13:13:26 on Apr 21,2026
+# vlog -reportprogress 300 -work work ALU_CTRL.v 
+# -- Compiling module ALU_CTRL
+# 
+# Top level modules:
+# 	ALU_CTRL
+# End time: 13:13:26 on Apr 21,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work CTRL_UNIT.v
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 13:13:26 on Apr 21,2026
+# vlog -reportprogress 300 -work work CTRL_UNIT.v 
+# -- Compiling module CTRL_UNIT
+# 
+# Top level modules:
+# 	CTRL_UNIT
+# End time: 13:13:26 on Apr 21,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work REG_FILE.v
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 13:13:26 on Apr 21,2026
+# vlog -reportprogress 300 -work work REG_FILE.v 
+# -- Compiling module REG_FILE
+# 
+# Top level modules:
+# 	REG_FILE
+# End time: 13:13:26 on Apr 21,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work INSTRUCT_MEM.v
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 13:13:26 on Apr 21,2026
+# vlog -reportprogress 300 -work work INSTRUCT_MEM.v 
+# -- Compiling module INSTRUCT_MEM
+# 
+# Top level modules:
+# 	INSTRUCT_MEM
+# End time: 13:13:26 on Apr 21,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work DATA_MEM.v
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 13:13:26 on Apr 21,2026
+# vlog -reportprogress 300 -work work DATA_MEM.v 
+# -- Compiling module DATA_MEM
+# 
+# Top level modules:
+# 	DATA_MEM
+# End time: 13:13:27 on Apr 21,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -work work ARM_CPU.v
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 13:13:27 on Apr 21,2026
+# vlog -reportprogress 300 -work work ARM_CPU.v 
+# -- Compiling module arm_cpu
+# -- Compiling module mux_64
+# -- Compiling module mux_5
+# -- Compiling module sign_ext
+# -- Compiling module sll_2
+# 
+# Top level modules:
+# 	arm_cpu
+# End time: 13:13:27 on Apr 21,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work cpu_tb.v
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 13:13:27 on Apr 21,2026
+# vlog -reportprogress 300 -work work cpu_tb.v 
+# -- Compiling module cpu_tb
+# 
+# Top level modules:
+# 	cpu_tb
+# End time: 13:13:27 on Apr 21,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -voptargs=+acc work.cpu_tb
+# End time: 13:13:29 on Apr 21,2026, Elapsed time: 0:02:22
+# Errors: 0, Warnings: 1
+# vsim -voptargs="+acc" work.cpu_tb 
+# Start time: 13:13:29 on Apr 21,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.cpu_tb(fast)
+# Loading work.INSTRUCT_MEM(fast)
+# Loading work.REG_FILE(fast)
+# Loading work.DATA_MEM(fast)
+# Loading work.arm_cpu(fast)
+# Loading work.CTRL_UNIT(fast)
+# Loading work.ALU_CTRL(fast)
+# Loading work.mux_5(fast)
+# Loading work.sign_ext(fast)
+# Loading work.sll_2(fast)
+# Loading work.mux_64(fast)
+# Loading work.ALU64(fast)
+# 
+# add wave -noupdate -divider "System Clock"
+# add wave -noupdate -radix binary /cpu_tb/CLK
+# 
+# add wave -noupdate -divider "Program Counter & Instruction"
+# add wave -noupdate -radix unsigned /cpu_tb/PC
+# add wave -noupdate -radix hexadecimal /cpu_tb/INSTRUCT_MEM_OUT
+# 
+# add wave -noupdate -divider "Control Unit"
+# add wave -noupdate -radix binary /cpu_tb/core/main_ctrl/opcode
+# add wave -noupdate -radix binary /cpu_tb/CTRL_REGWRITE
+# add wave -noupdate -radix binary /cpu_tb/CTRL_MEMREAD
+# add wave -noupdate -radix binary /cpu_tb/CTRL_MEMWRITE
+# 
+# add wave -noupdate -divider "Register File"
+# add wave -noupdate -radix unsigned /cpu_tb/RD_REG1
+# add wave -noupdate -radix unsigned /cpu_tb/RD_REG2
+# add wave -noupdate -radix unsigned /cpu_tb/WR_REG
+# add wave -noupdate -radix decimal /cpu_tb/RD_DATA1
+# add wave -noupdate -radix decimal /cpu_tb/RD_DATA2
+# add wave -noupdate -radix decimal /cpu_tb/DMEM_WR_Back
+# 
+# add wave -noupdate -divider "Data Memory"
+# add wave -noupdate -radix decimal /cpu_tb/DMEM_Addr
+# add wave -noupdate -radix decimal /cpu_tb/DMEM_WR_DATA
+# add wave -noupdate -radix decimal /cpu_tb/DMEM_RD_DATA
+# 
+# TreeUpdate [SetDefaultTree]
+# WaveRestoreCursors {{Cursor 1} {0 ns} 0}
+# configure wave -namecolwidth 250
+# configure wave -valuecolwidth 100
+# configure wave -justifyvalue left
+# configure wave -signalnamewidth 1
+# configure wave -snapdistance 10
+# configure wave -datasetprefix 0
+# configure wave -rowmargin 4
+# configure wave -childrowmargin 2
+# 
+# run 200 ns
+# ** Note: $finish    : cpu_tb.v(78)
+#    Time: 200 ns  Iteration: 0  Instance: /cpu_tb
+# 1
+# Break in Module cpu_tb at cpu_tb.v line 78
+do run.do
+# if {[file exists work]} {
+# 	vdel -lib work -all
+# }
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is Larry@DF-PC101.
+# 
+# 
+# vlib work
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# vmap work work
+# Questa Intel Starter FPGA Edition-64 vmap 2023.3 Lib Mapping Utility 2023.07 Jul 17 2023
+# vmap work work 
+# Modifying modelsim.ini
+# 
+# vlog -work work ALU64.v
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 13:51:27 on Apr 21,2026
+# vlog -reportprogress 300 -work work ALU64.v 
+# -- Compiling module ALU64
+# 
+# Top level modules:
+# 	ALU64
+# End time: 13:51:27 on Apr 21,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work ALU_CTRL.v
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 13:51:27 on Apr 21,2026
+# vlog -reportprogress 300 -work work ALU_CTRL.v 
+# -- Compiling module ALU_CTRL
+# 
+# Top level modules:
+# 	ALU_CTRL
+# End time: 13:51:27 on Apr 21,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work CTRL_UNIT.v
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 13:51:27 on Apr 21,2026
+# vlog -reportprogress 300 -work work CTRL_UNIT.v 
+# -- Compiling module CTRL_UNIT
+# 
+# Top level modules:
+# 	CTRL_UNIT
+# End time: 13:51:27 on Apr 21,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work REG_FILE.v
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 13:51:27 on Apr 21,2026
+# vlog -reportprogress 300 -work work REG_FILE.v 
+# -- Compiling module REG_FILE
+# 
+# Top level modules:
+# 	REG_FILE
+# End time: 13:51:27 on Apr 21,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work INSTRUCT_MEM.v
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 13:51:27 on Apr 21,2026
+# vlog -reportprogress 300 -work work INSTRUCT_MEM.v 
+# -- Compiling module INSTRUCT_MEM
+# 
+# Top level modules:
+# 	INSTRUCT_MEM
+# End time: 13:51:27 on Apr 21,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work DATA_MEM.v
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 13:51:27 on Apr 21,2026
+# vlog -reportprogress 300 -work work DATA_MEM.v 
+# -- Compiling module DATA_MEM
+# 
+# Top level modules:
+# 	DATA_MEM
+# End time: 13:51:27 on Apr 21,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work ARM_CPU.v
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 13:51:27 on Apr 21,2026
+# vlog -reportprogress 300 -work work ARM_CPU.v 
+# -- Compiling module arm_cpu
+# -- Compiling module mux_64
+# -- Compiling module mux_5
+# -- Compiling module sign_ext
+# -- Compiling module sll_2
+# 
+# Top level modules:
+# 	arm_cpu
+# End time: 13:51:27 on Apr 21,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work cpu_tb.v
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 13:51:27 on Apr 21,2026
+# vlog -reportprogress 300 -work work cpu_tb.v 
+# -- Compiling module cpu_tb
+# 
+# Top level modules:
+# 	cpu_tb
+# End time: 13:51:27 on Apr 21,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -voptargs=+acc work.cpu_tb
+# End time: 13:51:29 on Apr 21,2026, Elapsed time: 0:38:00
+# Errors: 0, Warnings: 1
+# vsim -voptargs="+acc" work.cpu_tb 
+# Start time: 13:51:29 on Apr 21,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.cpu_tb(fast)
+# Loading work.INSTRUCT_MEM(fast)
+# Loading work.REG_FILE(fast)
+# Loading work.DATA_MEM(fast)
+# Loading work.arm_cpu(fast)
+# Loading work.CTRL_UNIT(fast)
+# Loading work.ALU_CTRL(fast)
+# Loading work.mux_5(fast)
+# Loading work.sign_ext(fast)
+# Loading work.sll_2(fast)
+# Loading work.mux_64(fast)
+# Loading work.ALU64(fast)
+# 
+# add wave -noupdate -divider "System Clock"
+# add wave -noupdate -radix binary /cpu_tb/CLK
+# 
+# add wave -noupdate -divider "Program Counter & Instruction"
+# add wave -noupdate -radix unsigned /cpu_tb/PC
+# add wave -noupdate -radix hexadecimal /cpu_tb/INSTRUCT_MEM_OUT
+# 
+# add wave -noupdate -divider "Control Unit"
+# add wave -noupdate -radix binary /cpu_tb/core/main_ctrl/opcode
+# add wave -noupdate -radix binary /cpu_tb/CTRL_REGWRITE
+# add wave -noupdate -radix binary /cpu_tb/CTRL_MEMREAD
+# add wave -noupdate -radix binary /cpu_tb/CTRL_MEMWRITE
+# 
+# add wave -noupdate -divider "Register File"
+# add wave -noupdate -radix unsigned /cpu_tb/RD_REG1
+# add wave -noupdate -radix unsigned /cpu_tb/RD_REG2
+# add wave -noupdate -radix unsigned /cpu_tb/WR_REG
+# add wave -noupdate -radix decimal /cpu_tb/RD_DATA1
+# add wave -noupdate -radix decimal /cpu_tb/RD_DATA2
+# add wave -noupdate -radix decimal /cpu_tb/DMEM_WR_Back
+# 
+# add wave -noupdate -divider "Data Memory"
+# add wave -noupdate -radix decimal /cpu_tb/DMEM_Addr
+# add wave -noupdate -radix decimal /cpu_tb/DMEM_WR_DATA
+# add wave -noupdate -radix decimal /cpu_tb/DMEM_RD_DATA
+# 
+# TreeUpdate [SetDefaultTree]
+# WaveRestoreCursors {{Cursor 1} {0 ns} 0}
+# configure wave -namecolwidth 250
+# configure wave -valuecolwidth 100
+# configure wave -justifyvalue left
+# configure wave -signalnamewidth 1
+# configure wave -snapdistance 10
+# configure wave -datasetprefix 0
+# configure wave -rowmargin 4
+# configure wave -childrowmargin 2
+# 
+# run 200 ns
+# ** Note: $finish    : cpu_tb.v(78)
+#    Time: 200 ns  Iteration: 0  Instance: /cpu_tb
+# 1
+# Break in Module cpu_tb at cpu_tb.v line 78
+# --------------------------------------------------------
+# CBZ Debugging ModelSim TCL Script
+# Save as "run_cbz.do"
+# --------------------------------------------------------
 
-# 5. Configure the waveform viewer
-# Grouping signals makes tracking combinational loops much easier
-add wave -noupdate -divider "System Clock"
+transcript on
+if {[file exists work]} {
+	vdel -lib work -all
+}
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is Larry@DF-PC101.
+
+vlib work
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+vmap work work
+# Questa Intel Starter FPGA Edition-64 vmap 2023.3 Lib Mapping Utility 2023.07 Jul 17 2023
+# vmap work work 
+# Modifying modelsim.ini
+
+# Compile all Verilog files in the directory
+vlog -work work *.v
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 14:11:57 on Apr 21,2026
+# vlog -reportprogress 300 -work work ALU64.v ALU_CTRL.v ARM_CPU.v CTRL_UNIT.v DATA_MEM.v INSTRUCT_MEM.v REG_FILE.v cpu_tb.v 
+# -- Compiling module ALU64
+# -- Compiling module ALU_CTRL
+# -- Compiling module arm_cpu
+# -- Compiling module mux_64
+# -- Compiling module mux_5
+# -- Compiling module sign_ext
+# -- Compiling module sll_2
+# -- Compiling module CTRL_UNIT
+# -- Compiling module DATA_MEM
+# -- Compiling module INSTRUCT_MEM
+# -- Compiling module REG_FILE
+# -- Compiling module cpu_tb
+# 
+# Top level modules:
+# 	cpu_tb
+# End time: 14:11:57 on Apr 21,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+
+# Load simulation without optimizing away internal core signals
+vsim -voptargs=+acc work.cpu_tb
+# End time: 14:11:59 on Apr 21,2026, Elapsed time: 0:20:30
+# Errors: 0, Warnings: 1
+# vsim -voptargs="+acc" work.cpu_tb 
+# Start time: 14:11:59 on Apr 21,2026
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.cpu_tb(fast)
+# Loading work.INSTRUCT_MEM(fast)
+# Loading work.REG_FILE(fast)
+# Loading work.DATA_MEM(fast)
+# Loading work.arm_cpu(fast)
+# Loading work.CTRL_UNIT(fast)
+# Loading work.ALU_CTRL(fast)
+# Loading work.mux_5(fast)
+# Loading work.sign_ext(fast)
+# Loading work.sll_2(fast)
+# Loading work.mux_64(fast)
+# Loading work.ALU64(fast)
+
+# -- Waveform Configuration --
+
+add wave -noupdate -divider "Clock & PC"
 add wave -noupdate -radix binary /cpu_tb/CLK
-
-add wave -noupdate -divider "Program Counter & Instruction"
 add wave -noupdate -radix unsigned /cpu_tb/PC
+add wave -noupdate -radix unsigned /cpu_tb/core/temp_pc
+
+add wave -noupdate -divider "Instruction & Decode"
 add wave -noupdate -radix hexadecimal /cpu_tb/INSTRUCT_MEM_OUT
-
-add wave -noupdate -divider "Control Unit"
 add wave -noupdate -radix binary /cpu_tb/core/main_ctrl/opcode
-add wave -noupdate -radix binary /cpu_tb/CTRL_REGWRITE
-add wave -noupdate -radix binary /cpu_tb/CTRL_MEMREAD
-add wave -noupdate -radix binary /cpu_tb/CTRL_MEMWRITE
 
-add wave -noupdate -divider "Register File"
-add wave -noupdate -radix unsigned /cpu_tb/RD_REG1
+add wave -noupdate -divider "CBZ Datapath (Zero Check)"
 add wave -noupdate -radix unsigned /cpu_tb/RD_REG2
-add wave -noupdate -radix unsigned /cpu_tb/WR_REG
-add wave -noupdate -radix decimal /cpu_tb/RD_DATA1
 add wave -noupdate -radix decimal /cpu_tb/RD_DATA2
-add wave -noupdate -radix decimal /cpu_tb/DMEM_WR_Back
+add wave -noupdate -radix binary /cpu_tb/core/CTRL_ALU_OP
+add wave -noupdate -radix binary /cpu_tb/core/ALU_CTRL_OUT
+add wave -noupdate -radix decimal /cpu_tb/core/ALU_ARG2
+add wave -noupdate -radix decimal /cpu_tb/core/ALU_RESULT
+add wave -noupdate -color {Orange} -radix binary /cpu_tb/core/ALU_zero_flag
 
-add wave -noupdate -divider "Data Memory"
-add wave -noupdate -radix decimal /cpu_tb/DMEM_Addr
-add wave -noupdate -radix decimal /cpu_tb/DMEM_WR_DATA
-add wave -noupdate -radix decimal /cpu_tb/DMEM_RD_DATA
+add wave -noupdate -divider "CBZ Branch Logic"
+add wave -noupdate -radix binary /cpu_tb/core/CTRL_BRANCH
+add wave -noupdate -color {Orange} -radix binary /cpu_tb/core/branch_zero
+add wave -noupdate -color {Red} -radix binary /cpu_tb/core/CTRL_JUMP
 
-# 6. Configure waveform window properties
+add wave -noupdate -divider "Branch Target Calculation"
+add wave -noupdate -radix decimal /cpu_tb/core/INSTRUCT_SIGN_EXT
+add wave -noupdate -radix decimal /cpu_tb/core/immd_shifted
+add wave -noupdate -radix unsigned /cpu_tb/core/PC_plus4
+add wave -noupdate -radix unsigned /cpu_tb/core/PC_ALU_out
+
+# -- Format and Run --
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {0 ns} 0}
+WaveRestoreCursors {{CBZ Execute} {50 ns} 0}
 configure wave -namecolwidth 250
 configure wave -valuecolwidth 100
 configure wave -justifyvalue left
 configure wave -signalnamewidth 1
-configure wave -snapdistance 10
-configure wave -datasetprefix 0
-configure wave -rowmargin 4
-configure wave -childrowmargin 2
+configure wave -timelineunits ns
 
-# 7. Run the simulation
-# Set to a small step first to catch the 0ns iteration limit issue
-run 10 ns
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: Larry  Hostname: DF-PC101  ProcessID: 34788
-#           Attempting to use alternate WLF file "./wlftzbx4g9".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftzbx4g9
-# End time: 23:56:04 on Apr 20,2026, Elapsed time: 0:09:02
-# Errors: 0, Warnings: 3
+# Run past PC=16 (CBZ R1, #2 happens around 40ns - 50ns)
+run 80 ns
+# --------------------------------------------------------
+# CBZ Debugging ModelSim TCL Script
+# Save as "run_cbz.do"
+# --------------------------------------------------------
+
+transcript on
+if {[file exists work]} {
+	vdel -lib work -all
+}
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is Larry@DF-PC101.
+
+vlib work
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+vmap work work
+# Questa Intel Starter FPGA Edition-64 vmap 2023.3 Lib Mapping Utility 2023.07 Jul 17 2023
+# vmap work work 
+# Modifying modelsim.ini
+
+# Compile all Verilog files in the directory
+vlog -work work *.v
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 14:14:43 on Apr 21,2026
+# vlog -reportprogress 300 -work work ALU64.v ALU_CTRL.v ARM_CPU.v CTRL_UNIT.v DATA_MEM.v INSTRUCT_MEM.v REG_FILE.v cpu_tb.v 
+# -- Compiling module ALU64
+# -- Compiling module ALU_CTRL
+# -- Compiling module arm_cpu
+# -- Compiling module mux_64
+# -- Compiling module mux_5
+# -- Compiling module sign_ext
+# -- Compiling module sll_2
+# -- Compiling module CTRL_UNIT
+# -- Compiling module DATA_MEM
+# -- Compiling module INSTRUCT_MEM
+# -- Compiling module REG_FILE
+# -- Compiling module cpu_tb
+# 
+# Top level modules:
+# 	cpu_tb
+# End time: 14:14:43 on Apr 21,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+
+# Load simulation without optimizing away internal core signals
+vsim -voptargs=+acc work.cpu_tb
+# End time: 14:14:45 on Apr 21,2026, Elapsed time: 0:02:46
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.cpu_tb 
+# Start time: 14:14:45 on Apr 21,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.cpu_tb(fast)
+# Loading work.INSTRUCT_MEM(fast)
+# Loading work.REG_FILE(fast)
+# Loading work.DATA_MEM(fast)
+# Loading work.arm_cpu(fast)
+# Loading work.CTRL_UNIT(fast)
+# Loading work.ALU_CTRL(fast)
+# Loading work.mux_5(fast)
+# Loading work.sign_ext(fast)
+# Loading work.sll_2(fast)
+# Loading work.mux_64(fast)
+# Loading work.ALU64(fast)
+
+# -- Waveform Configuration --
+
+add wave -noupdate -divider "Clock & PC"
+add wave -noupdate -radix binary /cpu_tb/CLK
+add wave -noupdate -radix unsigned /cpu_tb/PC
+add wave -noupdate -radix unsigned /cpu_tb/core/temp_pc
+
+add wave -noupdate -divider "Instruction & Decode"
+add wave -noupdate -radix hexadecimal /cpu_tb/INSTRUCT_MEM_OUT
+add wave -noupdate -radix binary /cpu_tb/core/main_ctrl/opcode
+
+add wave -noupdate -divider "CBZ Datapath (Zero Check)"
+add wave -noupdate -radix unsigned /cpu_tb/RD_REG2
+add wave -noupdate -radix decimal /cpu_tb/RD_DATA2
+add wave -noupdate -radix binary /cpu_tb/core/CTRL_ALU_OP
+add wave -noupdate -radix binary /cpu_tb/core/ALU_CTRL_OUT
+add wave -noupdate -radix decimal /cpu_tb/core/ALU_ARG2
+add wave -noupdate -radix decimal /cpu_tb/core/ALU_RESULT
+add wave -noupdate -color {Orange} -radix binary /cpu_tb/core/ALU_zero_flag
+
+add wave -noupdate -divider "CBZ Branch Logic"
+add wave -noupdate -radix binary /cpu_tb/core/CTRL_BRANCH
+add wave -noupdate -color {Orange} -radix binary /cpu_tb/core/branch_zero
+add wave -noupdate -color {Red} -radix binary /cpu_tb/core/CTRL_JUMP
+
+add wave -noupdate -divider "Branch Target Calculation"
+add wave -noupdate -radix decimal /cpu_tb/core/INSTRUCT_SIGN_EXT
+add wave -noupdate -radix decimal /cpu_tb/core/immd_shifted
+add wave -noupdate -radix unsigned /cpu_tb/core/PC_plus4
+add wave -noupdate -radix unsigned /cpu_tb/core/PC_ALU_out
+
+# -- Format and Run --
+TreeUpdate [SetDefaultTree]
+WaveRestoreCursors {{CBZ Execute} {50 ns} 0}
+configure wave -namecolwidth 250
+configure wave -valuecolwidth 100
+configure wave -justifyvalue left
+configure wave -signalnamewidth 1
+configure wave -timelineunits ns
+
+# Run past PC=16 (CBZ R1, #2 happens around 40ns - 50ns)
+run 80 ns
+do run.do
+# if {[file exists work]} {
+# 	vdel -lib work -all
+# }
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is Larry@DF-PC101.
+# 
+# 
+# vlib work
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# vmap work work
+# Questa Intel Starter FPGA Edition-64 vmap 2023.3 Lib Mapping Utility 2023.07 Jul 17 2023
+# vmap work work 
+# Modifying modelsim.ini
+# 
+# vlog -work work ALU64.v
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 14:21:44 on Apr 21,2026
+# vlog -reportprogress 300 -work work ALU64.v 
+# -- Compiling module ALU64
+# 
+# Top level modules:
+# 	ALU64
+# End time: 14:21:44 on Apr 21,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work ALU_CTRL.v
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 14:21:44 on Apr 21,2026
+# vlog -reportprogress 300 -work work ALU_CTRL.v 
+# -- Compiling module ALU_CTRL
+# 
+# Top level modules:
+# 	ALU_CTRL
+# End time: 14:21:44 on Apr 21,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work CTRL_UNIT.v
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 14:21:44 on Apr 21,2026
+# vlog -reportprogress 300 -work work CTRL_UNIT.v 
+# -- Compiling module CTRL_UNIT
+# 
+# Top level modules:
+# 	CTRL_UNIT
+# End time: 14:21:44 on Apr 21,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work REG_FILE.v
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 14:21:44 on Apr 21,2026
+# vlog -reportprogress 300 -work work REG_FILE.v 
+# -- Compiling module REG_FILE
+# 
+# Top level modules:
+# 	REG_FILE
+# End time: 14:21:44 on Apr 21,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work INSTRUCT_MEM.v
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 14:21:44 on Apr 21,2026
+# vlog -reportprogress 300 -work work INSTRUCT_MEM.v 
+# -- Compiling module INSTRUCT_MEM
+# 
+# Top level modules:
+# 	INSTRUCT_MEM
+# End time: 14:21:44 on Apr 21,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work DATA_MEM.v
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 14:21:44 on Apr 21,2026
+# vlog -reportprogress 300 -work work DATA_MEM.v 
+# -- Compiling module DATA_MEM
+# 
+# Top level modules:
+# 	DATA_MEM
+# End time: 14:21:44 on Apr 21,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work ARM_CPU.v
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 14:21:44 on Apr 21,2026
+# vlog -reportprogress 300 -work work ARM_CPU.v 
+# -- Compiling module arm_cpu
+# -- Compiling module mux_64
+# -- Compiling module mux_5
+# -- Compiling module sign_ext
+# -- Compiling module sll_2
+# 
+# Top level modules:
+# 	arm_cpu
+# End time: 14:21:44 on Apr 21,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work cpu_tb.v
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 14:21:44 on Apr 21,2026
+# vlog -reportprogress 300 -work work cpu_tb.v 
+# -- Compiling module cpu_tb
+# 
+# Top level modules:
+# 	cpu_tb
+# End time: 14:21:44 on Apr 21,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -voptargs=+acc work.cpu_tb
+# End time: 14:21:46 on Apr 21,2026, Elapsed time: 0:07:01
+# Errors: 0, Warnings: 1
+# vsim -voptargs="+acc" work.cpu_tb 
+# Start time: 14:21:46 on Apr 21,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.cpu_tb(fast)
+# Loading work.INSTRUCT_MEM(fast)
+# Loading work.REG_FILE(fast)
+# Loading work.DATA_MEM(fast)
+# Loading work.arm_cpu(fast)
+# Loading work.CTRL_UNIT(fast)
+# Loading work.ALU_CTRL(fast)
+# Loading work.mux_5(fast)
+# Loading work.sign_ext(fast)
+# Loading work.sll_2(fast)
+# Loading work.mux_64(fast)
+# Loading work.ALU64(fast)
+# doVOpenFlatFile(): INTERNAL ERROR: page load failed for file C:/Users/Larry/projects/CompArch/CPU/work/@_opt/voptve05yd (0:0 3:3 56 0 1340 1776795707 0x10b:0x101)
+# 
+# add wave -noupdate -divider "System Clock"
+# add wave -noupdate -radix binary /cpu_tb/CLK
+# 
+# add wave -noupdate -divider "Program Counter & Instruction"
+# add wave -noupdate -radix unsigned /cpu_tb/PC
+# add wave -noupdate -radix hexadecimal /cpu_tb/INSTRUCT_MEM_OUT
+# 
+# add wave -noupdate -divider "Control Unit"
+# add wave -noupdate -radix binary /cpu_tb/core/main_ctrl/opcode
+# add wave -noupdate -radix binary /cpu_tb/CTRL_REGWRITE
+# add wave -noupdate -radix binary /cpu_tb/CTRL_MEMREAD
+# add wave -noupdate -radix binary /cpu_tb/CTRL_MEMWRITE
+# 
+# add wave -noupdate -divider "Register File"
+# add wave -noupdate -radix unsigned /cpu_tb/RD_REG1
+# add wave -noupdate -radix unsigned /cpu_tb/RD_REG2
+# add wave -noupdate -radix unsigned /cpu_tb/WR_REG
+# add wave -noupdate -radix decimal /cpu_tb/RD_DATA1
+# add wave -noupdate -radix decimal /cpu_tb/RD_DATA2
+# add wave -noupdate -radix decimal /cpu_tb/DMEM_WR_Back
+# 
+# add wave -noupdate -divider "Data Memory"
+# add wave -noupdate -radix decimal /cpu_tb/DMEM_Addr
+# add wave -noupdate -radix decimal /cpu_tb/DMEM_WR_DATA
+# add wave -noupdate -radix decimal /cpu_tb/DMEM_RD_DATA
+# 
+# TreeUpdate [SetDefaultTree]
+# WaveRestoreCursors {{Cursor 1} {0 ns} 0}
+# configure wave -namecolwidth 250
+# configure wave -valuecolwidth 100
+# configure wave -justifyvalue left
+# configure wave -signalnamewidth 1
+# configure wave -snapdistance 10
+# configure wave -datasetprefix 0
+# configure wave -rowmargin 4
+# configure wave -childrowmargin 2
+# 
+# run 200 ns
+# ** Note: $finish    : cpu_tb.v(78)
+#    Time: 200 ns  Iteration: 0  Instance: /cpu_tb
+# 1
+# Break in Module cpu_tb at cpu_tb.v line 78
+# --------------------------------------------------------
+# CBZ Debugging ModelSim TCL Script
+# Save as "run_cbz.do"
+# --------------------------------------------------------
+
+transcript on
+if {[file exists work]} {
+	vdel -lib work -all
+}
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is Larry@DF-PC101.
+
+vlib work
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+vmap work work
+# Questa Intel Starter FPGA Edition-64 vmap 2023.3 Lib Mapping Utility 2023.07 Jul 17 2023
+# vmap work work 
+# Modifying modelsim.ini
+
+# Compile all Verilog files in the directory
+vlog -work work *.v
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 14:22:25 on Apr 21,2026
+# vlog -reportprogress 300 -work work ALU64.v ALU_CTRL.v ARM_CPU.v CTRL_UNIT.v DATA_MEM.v INSTRUCT_MEM.v REG_FILE.v cpu_tb.v 
+# -- Compiling module ALU64
+# -- Compiling module ALU_CTRL
+# -- Compiling module arm_cpu
+# -- Compiling module mux_64
+# -- Compiling module mux_5
+# -- Compiling module sign_ext
+# -- Compiling module sll_2
+# -- Compiling module CTRL_UNIT
+# -- Compiling module DATA_MEM
+# -- Compiling module INSTRUCT_MEM
+# -- Compiling module REG_FILE
+# -- Compiling module cpu_tb
+# 
+# Top level modules:
+# 	cpu_tb
+# End time: 14:22:25 on Apr 21,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+
+# Load simulation without optimizing away internal core signals
+vsim -voptargs=+acc work.cpu_tb
+# End time: 14:22:27 on Apr 21,2026, Elapsed time: 0:00:41
+# Errors: 0, Warnings: 1
+# vsim -voptargs="+acc" work.cpu_tb 
+# Start time: 14:22:27 on Apr 21,2026
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.cpu_tb(fast)
+# Loading work.INSTRUCT_MEM(fast)
+# Loading work.REG_FILE(fast)
+# Loading work.DATA_MEM(fast)
+# Loading work.arm_cpu(fast)
+# Loading work.CTRL_UNIT(fast)
+# Loading work.ALU_CTRL(fast)
+# Loading work.mux_5(fast)
+# Loading work.sign_ext(fast)
+# Loading work.sll_2(fast)
+# Loading work.mux_64(fast)
+# Loading work.ALU64(fast)
+
+# -- Waveform Configuration --
+
+add wave -noupdate -divider "Clock & PC"
+add wave -noupdate -radix binary /cpu_tb/CLK
+add wave -noupdate -radix unsigned /cpu_tb/PC
+add wave -noupdate -radix unsigned /cpu_tb/core/temp_pc
+
+add wave -noupdate -divider "Instruction & Decode"
+add wave -noupdate -radix hexadecimal /cpu_tb/INSTRUCT_MEM_OUT
+add wave -noupdate -radix binary /cpu_tb/core/main_ctrl/opcode
+
+add wave -noupdate -divider "CBZ Datapath (Zero Check)"
+add wave -noupdate -radix unsigned /cpu_tb/RD_REG2
+add wave -noupdate -radix decimal /cpu_tb/RD_DATA2
+add wave -noupdate -radix binary /cpu_tb/core/CTRL_ALU_OP
+add wave -noupdate -radix binary /cpu_tb/core/ALU_CTRL_OUT
+add wave -noupdate -radix decimal /cpu_tb/core/ALU_ARG2
+add wave -noupdate -radix decimal /cpu_tb/core/ALU_RESULT
+add wave -noupdate -color {Orange} -radix binary /cpu_tb/core/ALU_zero_flag
+
+add wave -noupdate -divider "CBZ Branch Logic"
+add wave -noupdate -radix binary /cpu_tb/core/CTRL_BRANCH
+add wave -noupdate -color {Orange} -radix binary /cpu_tb/core/branch_zero
+add wave -noupdate -color {Red} -radix binary /cpu_tb/core/CTRL_JUMP
+
+add wave -noupdate -divider "Branch Target Calculation"
+add wave -noupdate -radix decimal /cpu_tb/core/INSTRUCT_SIGN_EXT
+add wave -noupdate -radix decimal /cpu_tb/core/immd_shifted
+add wave -noupdate -radix unsigned /cpu_tb/core/PC_plus4
+add wave -noupdate -radix unsigned /cpu_tb/core/PC_ALU_out
+
+# -- Format and Run --
+TreeUpdate [SetDefaultTree]
+WaveRestoreCursors {{CBZ Execute} {50 ns} 0}
+configure wave -namecolwidth 250
+configure wave -valuecolwidth 100
+configure wave -justifyvalue left
+configure wave -signalnamewidth 1
+configure wave -timelineunits ns
+
+# Run past PC=16 (CBZ R1, #2 happens around 40ns - 50ns)
+run 80 ns
+# --------------------------------------------------------
+# CBZ Debugging ModelSim TCL Script
+# Save as "run_cbz.do"
+# --------------------------------------------------------
+
+transcript on
+if {[file exists work]} {
+	vdel -lib work -all
+}
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is Larry@DF-PC101.
+
+vlib work
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+vmap work work
+# Questa Intel Starter FPGA Edition-64 vmap 2023.3 Lib Mapping Utility 2023.07 Jul 17 2023
+# vmap work work 
+# Modifying modelsim.ini
+
+# Compile all Verilog files in the directory
+vlog -work work *.v
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 14:29:29 on Apr 21,2026
+# vlog -reportprogress 300 -work work ALU64.v ALU_CTRL.v ARM_CPU.v CTRL_UNIT.v DATA_MEM.v INSTRUCT_MEM.v REG_FILE.v cpu_tb.v 
+# -- Compiling module ALU64
+# -- Compiling module ALU_CTRL
+# -- Compiling module arm_cpu
+# -- Compiling module mux_64
+# -- Compiling module mux_5
+# -- Compiling module sign_ext
+# -- Compiling module sll_2
+# -- Compiling module CTRL_UNIT
+# -- Compiling module DATA_MEM
+# -- Compiling module INSTRUCT_MEM
+# -- Compiling module REG_FILE
+# -- Compiling module cpu_tb
+# 
+# Top level modules:
+# 	cpu_tb
+# End time: 14:29:29 on Apr 21,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+
+# Load simulation without optimizing away internal core signals
+vsim -voptargs=+acc work.cpu_tb
+# End time: 14:29:31 on Apr 21,2026, Elapsed time: 0:07:04
+# Errors: 0, Warnings: 0
+# vsim -voptargs="+acc" work.cpu_tb 
+# Start time: 14:29:31 on Apr 21,2026
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.cpu_tb(fast)
+# Loading work.INSTRUCT_MEM(fast)
+# Loading work.REG_FILE(fast)
+# Loading work.DATA_MEM(fast)
+# Loading work.arm_cpu(fast)
+# Loading work.CTRL_UNIT(fast)
+# Loading work.ALU_CTRL(fast)
+# Loading work.mux_5(fast)
+# Loading work.sign_ext(fast)
+# Loading work.sll_2(fast)
+# Loading work.mux_64(fast)
+# Loading work.ALU64(fast)
+
+# -- Waveform Configuration --
+
+add wave -noupdate -divider "Clock & PC"
+add wave -noupdate -radix binary /cpu_tb/CLK
+add wave -noupdate -radix unsigned /cpu_tb/PC
+add wave -noupdate -radix unsigned /cpu_tb/core/temp_pc
+
+add wave -noupdate -divider "Instruction & Decode"
+add wave -noupdate -radix hexadecimal /cpu_tb/INSTRUCT_MEM_OUT
+add wave -noupdate -radix binary /cpu_tb/core/main_ctrl/opcode
+
+add wave -noupdate -divider "CBZ Datapath (Zero Check)"
+add wave -noupdate -radix unsigned /cpu_tb/RD_REG2
+add wave -noupdate -radix decimal /cpu_tb/RD_DATA2
+add wave -noupdate -radix binary /cpu_tb/core/CTRL_ALU_OP
+add wave -noupdate -radix binary /cpu_tb/core/ALU_CTRL_OUT
+add wave -noupdate -radix decimal /cpu_tb/core/ALU_ARG2
+add wave -noupdate -radix decimal /cpu_tb/core/ALU_RESULT
+add wave -noupdate -color {Orange} -radix binary /cpu_tb/core/ALU_zero_flag
+
+add wave -noupdate -divider "CBZ Branch Logic"
+add wave -noupdate -radix binary /cpu_tb/core/CTRL_BRANCH
+add wave -noupdate -color {Orange} -radix binary /cpu_tb/core/branch_zero
+add wave -noupdate -color {Red} -radix binary /cpu_tb/core/CTRL_JUMP
+
+add wave -noupdate -divider "Branch Target Calculation"
+add wave -noupdate -radix decimal /cpu_tb/core/INSTRUCT_SIGN_EXT
+add wave -noupdate -radix decimal /cpu_tb/core/immd_shifted
+add wave -noupdate -radix unsigned /cpu_tb/core/PC_plus4
+add wave -noupdate -radix unsigned /cpu_tb/core/PC_ALU_out
+
+# -- Format and Run --
+TreeUpdate [SetDefaultTree]
+WaveRestoreCursors {{CBZ Execute} {50 ns} 0}
+configure wave -namecolwidth 250
+configure wave -valuecolwidth 100
+configure wave -justifyvalue left
+configure wave -signalnamewidth 1
+configure wave -timelineunits ns
+
+# Run past PC=16 (CBZ R1, #2 happens around 40ns - 50ns)
+run 80 ns
+do run.do
+# if {[file exists work]} {
+# 	vdel -lib work -all
+# }
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is Larry@DF-PC101.
+# 
+# 
+# vlib work
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# vmap work work
+# Questa Intel Starter FPGA Edition-64 vmap 2023.3 Lib Mapping Utility 2023.07 Jul 17 2023
+# vmap work work 
+# Modifying modelsim.ini
+# 
+# vlog -work work ALU64.v
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 14:30:08 on Apr 21,2026
+# vlog -reportprogress 300 -work work ALU64.v 
+# -- Compiling module ALU64
+# 
+# Top level modules:
+# 	ALU64
+# End time: 14:30:09 on Apr 21,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -work work ALU_CTRL.v
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 14:30:09 on Apr 21,2026
+# vlog -reportprogress 300 -work work ALU_CTRL.v 
+# -- Compiling module ALU_CTRL
+# 
+# Top level modules:
+# 	ALU_CTRL
+# End time: 14:30:09 on Apr 21,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work CTRL_UNIT.v
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 14:30:09 on Apr 21,2026
+# vlog -reportprogress 300 -work work CTRL_UNIT.v 
+# -- Compiling module CTRL_UNIT
+# 
+# Top level modules:
+# 	CTRL_UNIT
+# End time: 14:30:09 on Apr 21,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work REG_FILE.v
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 14:30:09 on Apr 21,2026
+# vlog -reportprogress 300 -work work REG_FILE.v 
+# -- Compiling module REG_FILE
+# 
+# Top level modules:
+# 	REG_FILE
+# End time: 14:30:09 on Apr 21,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work INSTRUCT_MEM.v
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 14:30:09 on Apr 21,2026
+# vlog -reportprogress 300 -work work INSTRUCT_MEM.v 
+# -- Compiling module INSTRUCT_MEM
+# 
+# Top level modules:
+# 	INSTRUCT_MEM
+# End time: 14:30:09 on Apr 21,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work DATA_MEM.v
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 14:30:09 on Apr 21,2026
+# vlog -reportprogress 300 -work work DATA_MEM.v 
+# -- Compiling module DATA_MEM
+# 
+# Top level modules:
+# 	DATA_MEM
+# End time: 14:30:09 on Apr 21,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work ARM_CPU.v
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 14:30:09 on Apr 21,2026
+# vlog -reportprogress 300 -work work ARM_CPU.v 
+# -- Compiling module arm_cpu
+# -- Compiling module mux_64
+# -- Compiling module mux_5
+# -- Compiling module sign_ext
+# -- Compiling module sll_2
+# 
+# Top level modules:
+# 	arm_cpu
+# End time: 14:30:09 on Apr 21,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -work work cpu_tb.v
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 14:30:09 on Apr 21,2026
+# vlog -reportprogress 300 -work work cpu_tb.v 
+# -- Compiling module cpu_tb
+# 
+# Top level modules:
+# 	cpu_tb
+# End time: 14:30:09 on Apr 21,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -voptargs=+acc work.cpu_tb
+# End time: 14:30:11 on Apr 21,2026, Elapsed time: 0:00:40
+# Errors: 0, Warnings: 1
+# vsim -voptargs="+acc" work.cpu_tb 
+# Start time: 14:30:11 on Apr 21,2026
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.cpu_tb(fast)
+# Loading work.INSTRUCT_MEM(fast)
+# Loading work.REG_FILE(fast)
+# Loading work.DATA_MEM(fast)
+# Loading work.arm_cpu(fast)
+# Loading work.CTRL_UNIT(fast)
+# Loading work.ALU_CTRL(fast)
+# Loading work.mux_5(fast)
+# Loading work.sign_ext(fast)
+# Loading work.sll_2(fast)
+# Loading work.mux_64(fast)
+# Loading work.ALU64(fast)
+# 
+# add wave -noupdate -divider "System Clock"
+# add wave -noupdate -radix binary /cpu_tb/CLK
+# 
+# add wave -noupdate -divider "Program Counter & Instruction"
+# add wave -noupdate -radix unsigned /cpu_tb/PC
+# add wave -noupdate -radix hexadecimal /cpu_tb/INSTRUCT_MEM_OUT
+# 
+# add wave -noupdate -divider "Control Unit"
+# add wave -noupdate -radix binary /cpu_tb/core/main_ctrl/opcode
+# add wave -noupdate -radix binary /cpu_tb/CTRL_REGWRITE
+# add wave -noupdate -radix binary /cpu_tb/CTRL_MEMREAD
+# add wave -noupdate -radix binary /cpu_tb/CTRL_MEMWRITE
+# 
+# add wave -noupdate -divider "Register File"
+# add wave -noupdate -radix unsigned /cpu_tb/RD_REG1
+# add wave -noupdate -radix unsigned /cpu_tb/RD_REG2
+# add wave -noupdate -radix unsigned /cpu_tb/WR_REG
+# add wave -noupdate -radix decimal /cpu_tb/RD_DATA1
+# add wave -noupdate -radix decimal /cpu_tb/RD_DATA2
+# add wave -noupdate -radix decimal /cpu_tb/DMEM_WR_Back
+# 
+# add wave -noupdate -divider "Data Memory"
+# add wave -noupdate -radix decimal /cpu_tb/DMEM_Addr
+# add wave -noupdate -radix decimal /cpu_tb/DMEM_WR_DATA
+# add wave -noupdate -radix decimal /cpu_tb/DMEM_RD_DATA
+# 
+# TreeUpdate [SetDefaultTree]
+# WaveRestoreCursors {{Cursor 1} {0 ns} 0}
+# configure wave -namecolwidth 250
+# configure wave -valuecolwidth 100
+# configure wave -justifyvalue left
+# configure wave -signalnamewidth 1
+# configure wave -snapdistance 10
+# configure wave -datasetprefix 0
+# configure wave -rowmargin 4
+# configure wave -childrowmargin 2
+# 
+# run 200 ns
+# ** Note: $finish    : cpu_tb.v(78)
+#    Time: 200 ns  Iteration: 0  Instance: /cpu_tb
+# End time: 14:30:17 on Apr 21,2026, Elapsed time: 0:00:06
+# Errors: 0, Warnings: 0

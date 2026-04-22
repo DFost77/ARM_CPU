@@ -55,4 +55,4 @@ configure wave -datasetprefix 0
 configure wave -rowmargin 4
 configure wave -childrowmargin 2
 
-run 200 ns
+run 145 ns
